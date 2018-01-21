@@ -9,6 +9,7 @@
 PLATFORM=QJ2077
 MODULE=fw0
 FW_VERSION=VERSION
+FW_STATUS=STATUS
 FW_PATH=/data/fw
 #BASE_URL=http://dl.ecouser.net:8005/products/wukong/class
 BASE_URL=http://${DOMAIN_NAME}:8005/products/wukong/class
@@ -22,7 +23,7 @@ mkdir -p ${FW_PATH}
 mret=`mdsctl sys0 "{\"pid_get\":\"get_all\"}"`
 SN=`cjp "${mret}" string sn`
 #MODEL=`cjp "${mret}" string dev_class`
-MODEL=162
+MODEL=161
 CURRENT_FW_VER=`cjp "${mret}" string fw_arm`
 MAC_ADDR=`ifconfig |grep wlan0|awk '{print $5}'`
 MDS_SVR_FW_META_URI=${BASE_URL}/${MODEL}/firmware/latest.json?sn=${SN}\&ver=${CURRENT_FW_VER}\&mac=${MAC_ADDR}\&plat=${PLATFORM}\&module=${MODULE}
@@ -50,11 +51,15 @@ fi
 #step 3:check fw version
 if [ _"$CURRENT_FW_VER" != _"$NEW_FW_VER" ];then
 	if [ -f ${FW_PATH}/${FW_VERSION} ];then
-	TMP_VERSION=`cat /data/fw/${FW_VERSION}`
+		TMP_VERSION=`cat ${FW_PATH}/${FW_VERSION}`
 		if [ _"$TMP_VERSION" != _"$NEW_FW_VER" ];then
 		mdsctl "fw" "{\"todo\": \"update_version\", \"version\": \"$NEW_FW_VER\"}"
 		echo "$NEW_FW_VER" > ${FW_PATH}/${FW_VERSION}
 		else
+		TMP_STATUS=`cat ${FW_PATH}/${FW_STATUS}`
+		if [ _"$TMP_STATUS" != _3 ] # if not load success
+		mdsctl "fw" "{\"todo\": \"update_version\", \"version\": \"$NEW_FW_VER\"}"
+		fi
 		exit 1
 		fi
 	else
@@ -62,10 +67,10 @@ if [ _"$CURRENT_FW_VER" != _"$NEW_FW_VER" ];then
 	echo "$NEW_FW_VER" > ${FW_PATH}/${FW_VERSION}
 	fi
 else
-exit 1
+exit 0
 fi
 
-#step 4:if request from hilink,trigger it to report msg || if QUICK is defined,meas quick upgrade
+#step 4:if request from APP,trigger it to report msg || if QUICK is defined,meas quick upgrade
 if [ -n "$REQUEST" ];then
     mdsctl "fw" '{"todo": "trigger"}' 
 fi
@@ -73,6 +78,6 @@ fi
 if [ -n "$QUICK" ];then
     mdsctl "fw" '{"todo": "qcheckok"}'
 fi
-exit 1
+exit 0
 
 

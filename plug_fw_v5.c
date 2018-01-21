@@ -41,6 +41,9 @@ modify by xiang.zhou
 #define FW_CHECKHANDLE_BEAT 1
 #define FW_CHECKHANDLE_QUICK 2
 
+#define FW_UPGRADE_NORMAL 0
+#define FW_UPGRADE_REQUEST 1
+
 typedef struct {
 	MDS_ELEM_MEMBERS;
 	enum {
@@ -168,7 +171,7 @@ static int _FwCheckHandle(MdsFwElem *fwEm, int isBeat)
 
 	return 0;
 }
-static int _FwDoUpgrade(MdsFwElem *fwEm)
+static int _FwDoUpgrade(MdsFwElem *fwEm, int flag)
 {
 	char *p = NULL;
 	char tmpBuf[256];
@@ -178,8 +181,10 @@ static int _FwDoUpgrade(MdsFwElem *fwEm)
 		MDS_DBG("LANGUAGE_IN_USE =%s\n",p);
 		write_language_in_use_to_file(fwEm,p);
 	}
-
-	snprintf(tmpBuf,sizeof(tmpBuf),"MDS_FW_FILE_NAME=%s  %s ",fwEm->fwFileName,fwEm->downloadFwHook);
+	if(FW_UPGRADE_NORMAL == flag)
+		snprintf(tmpBuf,sizeof(tmpBuf),"MDS_FW_FILE_NAME=%s NORMAL=YES %s ",fwEm->fwFileName,fwEm->downloadFwHook);
+	else
+		snprintf(tmpBuf,sizeof(tmpBuf),"MDS_FW_FILE_NAME=%s %s ",fwEm->fwFileName,fwEm->downloadFwHook);
 	MDS_DBG("tmpBuf =%s\n",tmpBuf);
 	system(tmpBuf);
 
@@ -355,7 +360,142 @@ static int _FwProcess(MDSElem* self, MDSElem* vendor, MdsMsg* msg)
 {
 	MdsFwElem *fwEm = NULL;
 	fwEm = (MdsFwElem*)self;
-	if (!strcmp(msg->type, MDS_MSG_TYPE_JSON_CMD))
+	int ret=0,error=0xf;
+	int error_code = 0;
+	char *pret=NULL,*perror=NULL;
+	if (!strcmp(msg->type, MDS_MSG_TYPE_CMD)) 
+	{
+		const char *jMsgStr;
+		CFBuffer *respBuf;
+		CFJson *jMsg;
+		const char* tmpCStr;
+		int result=-1;
+
+		char tmpBuf[128];
+
+		jMsgStr = ((MdsCmdMsg*)msg->data)->cmd;
+		respBuf = ((MdsCmdMsg*)msg->data)->respBuf;
+		MDS_DBG("jMsgStr:%s\n", jMsgStr);
+		jMsg = CFJsonParse(jMsgStr);
+		if (!jMsg) {
+			CFBufferCp(respBuf, CF_CONST_STR_LEN("Wrong cmd format\n"));
+		} else {
+			if ((tmpCStr = CFJsonObjectGetString(jMsg, "todo"))) {
+				if (!strcmp(tmpCStr, "fw")) {
+					if ((tmpCStr = CFJsonObjectGetString(jMsg, "cmd"))) {
+						if (!strcmp(tmpCStr, "query_update_status")){
+							if (fwEm->status==MDS_FW_ST_IDLE ){
+								CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\",\"status\": \"idle\"}"));  
+							}else{
+								CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\",\"status\": \"updating\"}"));
+							}
+						}
+					}
+					error = 0;
+				}else if(!strcmp(tmpCStr, "update_version")) {
+					if((tmpCStr = CFJsonObjectGetString(jMsg, "version"))) {
+						strncpy(fwEm->version, tmpCStr, sizeof(fwEm->version));
+					}
+
+					CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
+					error = 0;
+					_FwDoUpgrade(fwEm,FW_UPGRADE_NORMAL);
+				}else if(!strcmp(tmpCStr, "trigger")){
+					_TriggerHilink(fwEm);
+					CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
+					error = 0;
+				}else if(!strcmp(tmpCStr, "qcheckok")) {
+					_FwDoUpgrade(fwEm,FW_UPGRADE_REQUEST);
+					CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
+					error = 0;
+				}else if (!strcmp(tmpCStr, "status")) {
+					if ((tmpCStr = CFJsonObjectGetString(jMsg, "status"))) {
+						if (CFJsonObjectGetInt(jMsg, "result", &result)	) {
+							result = 1;
+						}
+
+						if (result != 0){
+							CFJsonObjectGetInt(jMsg, "error_code", &error_code);
+						}
+
+
+						if (!strcmp(tmpCStr, "MDS_FW_DL_FW_FINISHED")) {
+							CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
+
+							if(strlen(fwEm->doUpdateHook) && result==0){
+								snprintf(tmpBuf,sizeof(tmpBuf),"%s",fwEm->doUpdateHook);
+								system(tmpBuf);
+								fwEm->status = MDS_FW_ST_UPDATING;
+							}
+
+							error = result;
+						}else if (!strcmp(tmpCStr, "MDS_FW_UPDATE_FINISHED")) {	
+
+							if (fwEm->status != MDS_FW_ST_IDLE ){
+								
+								error = 0;
+								CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\"}")); 
+								MDS_DBG("SEND UPDATE MSG FAIL!!!!");
+								return -1;
+							}			
+						
+							switch (result){
+								case FW_DOWNLOAD_ERROR:
+									//download error
+									MdsFwElemPubMsg(fwEm,0,FW_DOWNLOAD_ERROR);
+									break;
+								case FW_FW_ERROR:
+									//firmware error
+									MdsFwElemPubMsg(fwEm,0,FW_FW_ERROR);
+									break;
+								case FW_UPGRADE_FAIL:
+									//upgrade fail
+									MdsFwElemPubMsg(fwEm,0,FW_UPGRADE_FAIL);
+									break;
+								default:
+									//success
+									MdsFwElemPubMsg(fwEm,1,0);
+									break;
+							}
+							error = 0;
+							CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));                          
+						} else {
+							error = 4;
+							CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\", \"error\":\"4\"}"));
+						}
+					} else {
+						error = 3;
+						CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\", \"error\":\"3\"}"));
+					}                  
+				} else if (!strcmp(tmpCStr, "QuickUpgrade")) {
+					if((fwEm->status==MDS_FW_ST_IDLE) && strlen(fwEm->checkFwHook)){
+						_FwCheckHandle(fwEm,FW_CHECKHANDLE_QUICK);
+						error = 0;
+						CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
+					}else{
+						error = -1;
+						CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\", \"error\":\"busy now!\"}"));
+					}				                       
+				} else {
+					error = 2;
+					CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\", \"error\":\"2\"}"));
+				}
+			} else {
+				error = 1;
+				CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"fail\", \"error\":\"1\"}"));
+			}
+			CFJsonPut(jMsg);
+
+			if(error!=0){
+
+				MdsFwElemPubMsg(fwEm,0,error_code);
+				PlaySound(fwEm,fwEm->soundNumUpgradFail );
+				fwEm->status = MDS_FW_ST_IDLE;
+			}
+
+		}
+	}
+	else if (!strcmp(msg->type, MDS_MSG_TYPE_JSON_CMD))
 	{
 		const char *pTmpStr = NULL;
 		MdsJsonCmdMsg *jCmd = (MdsJsonCmdMsg *)msg->data;
@@ -369,7 +509,7 @@ static int _FwProcess(MDSElem* self, MDSElem* vendor, MdsMsg* msg)
 			}
 			else if(!strcmp(pTmpStr, "do_upgrage"))
 			{
-				_FwDoUpgrade(fwEm);
+				_FwDoUpgrade(fwEm, FW_UPGRADE_REQUEST);
 			}
 			else if(!strcmp(pTmpStr,"get_version"))
 			{
