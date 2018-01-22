@@ -10,9 +10,10 @@ PLATFORM=QJ2077
 MODULE=fw0
 FW_VERSION=VERSION
 FW_STATUS=STATUS
-FW_PATH=/data/fw
+FW_PATH=/tmp/fw
 #BASE_URL=http://dl.ecouser.net:8005/products/wukong/class
-BASE_URL=http://${DOMAIN_NAME}:8005/products/wukong/class
+#BASE_URL=http://${DOMAIN_NAME}:8005/products/wukong/class
+BASE_URL=http://192.168.36.193:8000
 MDS_SVR_FW_META_FILE=${FW_PATH}/srv_fw_meta.json
 
 source /usr/bin/factory_fun
@@ -26,8 +27,8 @@ SN=`cjp "${mret}" string sn`
 MODEL=161
 CURRENT_FW_VER=`cjp "${mret}" string fw_arm`
 MAC_ADDR=`ifconfig |grep wlan0|awk '{print $5}'`
-MDS_SVR_FW_META_URI=${BASE_URL}/${MODEL}/firmware/latest.json?sn=${SN}\&ver=${CURRENT_FW_VER}\&mac=${MAC_ADDR}\&plat=${PLATFORM}\&module=${MODULE}
-
+#MDS_SVR_FW_META_URI=${BASE_URL}/${MODEL}/firmware/latest.json?sn=${SN}\&ver=${CURRENT_FW_VER}\&mac=${MAC_ADDR}\&plat=${PLATFORM}\&module=${MODULE}
+MDS_SVR_FW_META_URI=${BASE_URL}/latest.json
 rm -f ${MDS_SVR_FW_META_FILE}
 wget -T 60 -O ${MDS_SVR_FW_META_FILE}_ ${MDS_SVR_FW_META_URI} && mv ${MDS_SVR_FW_META_FILE}_ ${MDS_SVR_FW_META_FILE}
 if [ $? -ne 0 ]; then
@@ -57,7 +58,7 @@ if [ _"$CURRENT_FW_VER" != _"$NEW_FW_VER" ];then
 		echo "$NEW_FW_VER" > ${FW_PATH}/${FW_VERSION}
 		else
 		TMP_STATUS=`cat ${FW_PATH}/${FW_STATUS}`
-		if [ _"$TMP_STATUS" != _3 ] # if not load success
+		if [ _"$TMP_STATUS" != _3 ];then #if not load success
 		mdsctl "fw" "{\"todo\": \"update_version\", \"version\": \"$NEW_FW_VER\"}"
 		fi
 		exit 1
