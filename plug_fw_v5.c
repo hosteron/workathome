@@ -29,6 +29,13 @@ modify by xiang.zhou
 #define LANGUAGE_IN_USE_PATH  "/data/log/language_in_use"
 #define MDS_MAX_PATH_LEN            95
 
+#define FW_SUCCESS     0
+#define FW_BATTERY_LOW      10
+#define FW_OUT_OF_CHARGE      11
+#define FW_DOWNLOAD_ERROR 20
+#define FW_FW_ERROR       30
+#define FW_UPGRADE_FAIL     31
+
 #define FW_IN_UPGRADING_SOUND_NUM     		 90
 #define FW_UPGRADING_SUCCESS_SOUND_NUM     	 56
 #define FW_UPGRADING_FAIL_SOUND_NUM    		 76
@@ -144,7 +151,51 @@ int write_language_in_use_to_file(MdsFwElem *fwEm,char *p_language_in_use)
 	
 	return ret;
 }
+int MdsFwElemPubMsg(MdsFwElem *fwEm, int is_successed, int error_code)
+{
+	iks *resp;
+	MdsCtlMsg msg;
+	struct timeval tv;
+	uint64_t ts;
+	char pTmpValue[64] = { 0 };
 
+	gettimeofday(&tv, NULL);
+
+	ts = tv.tv_sec;
+	ts *= 1000;	
+	ts += tv.tv_usec/1000;
+
+	resp = iks_new("ctl");
+	if(resp){
+		memset(pTmpValue, 0, sizeof(pTmpValue));
+		snprintf(pTmpValue, sizeof(pTmpValue), "%lld", ts);
+		iks_insert_attrib(resp, "ts", pTmpValue);
+		iks_insert_attrib(resp, "td", "UpdateResult");
+
+		if(is_successed == 1)
+		{
+			iks_insert_attrib(resp, "ret", "ok");
+		}
+		else
+		{
+			iks_insert_attrib(resp, "ret", "fail");
+
+			memset(pTmpValue, 0, sizeof(pTmpValue));
+			snprintf(pTmpValue, sizeof(pTmpValue), "%d", error_code);
+			iks_insert_attrib(resp, "errno", pTmpValue);
+		}
+
+		msg.from = NULL;
+		msg.to = NULL;
+		msg.cmd = resp;
+
+		MDSElemCastMsg((MDSElem*)fwEm, MDS_MSG_TYPE_CTL, &msg);
+
+		iks_delete(resp);
+	}
+
+	return 0;
+}
 static int _FwCheckHandle(MdsFwElem *fwEm, int isBeat)
 {
 	char *p = NULL;
@@ -194,6 +245,9 @@ static int _FwDoUpgrade(MdsFwElem *fwEm, int flag)
 int fw_TimerHandlerfunc(CFFdevents* events, CFFdevent* event, int fd,void* arg)
 {
 	MdsFwElem *elem = (MdsFwElem *)arg;
+	uint64_t          exp;
+	read(fd, &exp, sizeof(uint64_t));
+	//printf("###[%s:%d]####\n", __func__,__LINE__);
 	_FwCheckHandle(elem, FW_CHECKHANDLE_BEAT);
 	return 0;
 }
@@ -203,7 +257,7 @@ static int TimerfdInit(unsigned int expiration_ms,unsigned int periodic_ms)
 	int fd;
 	struct timespec now;
 	struct itimerspec new_value;
-	if (clock_gettime(CLOCK_REALTIME, &now) == -1)
+	if (clock_gettime(CLOCK_MONOTONIC, &now) == -1)
 	{
 		perror("clock_gettime error");
 		return -1;
@@ -217,7 +271,8 @@ static int TimerfdInit(unsigned int expiration_ms,unsigned int periodic_ms)
 	}
 	new_value.it_interval.tv_sec = periodic_ms/1000;
 	new_value.it_interval.tv_nsec = (periodic_ms%1000)*1000*1000;
-	fd = timerfd_create(CLOCK_REALTIME, 0);
+	printf("[%s:%d]####%d,%d\n", __func__, __LINE__,new_value.it_interval.tv_sec,new_value.it_interval.tv_nsec);
+	fd = timerfd_create(CLOCK_MONOTONIC, 0);
 	if (fd <0)
 	{
 		perror("timerfd_create:"); 
@@ -238,7 +293,6 @@ static MDSElem* _FwElemRequested(MDSServer* svr, CFJson* jConf)
 	MdsFwElem* fwEm;
 	const char *tmpCStr,*ptr;
 	int tmpInt,len;
-
 #define GET_HOOK_INFO(__JCONF, __KEY, __TO, __DEFAULT,__IS_HOOK) 	\
 	if (!(tmpCStr = CFJsonObjectGetString(__JCONF, __KEY))) {	\
 		ptr = __DEFAULT;										\
@@ -278,31 +332,29 @@ static MDSElem* _FwElemRequested(MDSServer* svr, CFJson* jConf)
 	GET_HOOK_INFO(jConf, "domain_others",fwEm->domainOthers,DOMAIN_NAME_OTHER_AREAS,0);
 	
 	GET_HOOK_INFO(jConf, "language_in_use_path",fwEm->language_in_use_path,LANGUAGE_IN_USE_PATH,0);
-	
 	fwEm->status  = MDS_FW_ST_IDLE;
 
 	fwEm->soundNumInUpgrading	= FW_IN_UPGRADING_SOUND_NUM;
 	fwEm->soundNumUpgradSuccess = FW_UPGRADING_SUCCESS_SOUND_NUM;
 	fwEm->soundNumUpgradFail 	= FW_UPGRADING_FAIL_SOUND_NUM;
-
 	CFJsonObjectGetInt(jConf,"sound_num_in_upgrading",&fwEm->soundNumInUpgrading);
 	CFJsonObjectGetInt(jConf,"sound_num_upgrade_success",&fwEm->soundNumUpgradSuccess);
 	CFJsonObjectGetInt(jConf,"sound_num_upgrade_fail",&fwEm->soundNumUpgradFail);
 	fwEm->interval = 10;
 	CFJsonObjectGetInt(jConf,"interval",&fwEm->interval);
-
-	fwEm->fw_timer = TimerfdInit(1000, fwEm->interval*60*1000);
+	printf("[%s:%d]####%d\n", __func__, __LINE__, fwEm->interval);
+	//fwEm->fw_timer = TimerfdInit(1000, fwEm->interval*60*1000);
+	fwEm->fw_timer = TimerfdInit(10, 5*1000);
 	if(fwEm->fw_timer <= 0)
 	{
 		MDS_ERR_OUT(ERR_FREE_FEM, "TimerfdInit error\n");
 	}
-
 	if (CFFdeventInit(&fwEm->fw_event, fwEm->fw_timer, "fw timer fd event",
 				fw_TimerHandlerfunc, (void*)fwEm, NULL, NULL, NULL, NULL)) {
 		MDS_ERR_OUT(ERR_EVENT_INIT, "CFFdeventInit timer error\n");
 	}
 
-	if (CFFdeventsAdd(fwEm->server->fdevents, &fwEm->fw_event))
+	if (CFFdeventsAdd(MDSServerGetFdevents(svr), &fwEm->fw_event))
 	{
 		MDS_ERR_OUT(ERR_EVENT_ADD, "CFFdeventInit timer error\n");
 	}
@@ -313,7 +365,6 @@ static MDSElem* _FwElemRequested(MDSServer* svr, CFJson* jConf)
 				_FwRemoveAsGuest, _FwRemoveAsVendor)) {
 		MDS_ERR_OUT(ERR_FREE_INIT, "MDSElem init failed: for %s\n", tmpCStr);
 	}
-
 	return (MDSElem*)fwEm;
 ERR_FREE_INIT:
 	CFFdeventsDel(fwEm->server->fdevents, &fwEm->fw_event);
@@ -401,7 +452,7 @@ static int _FwProcess(MDSElem* self, MDSElem* vendor, MdsMsg* msg)
 					error = 0;
 					_FwDoUpgrade(fwEm,FW_UPGRADE_NORMAL);
 				}else if(!strcmp(tmpCStr, "trigger")){
-					_TriggerHilink(fwEm);
+					//_TriggerHilink(fwEm);
 					CFBufferCp(respBuf, CF_CONST_STR_LEN("{\"ret\": \"ok\"}"));
 					error = 0;
 				}else if(!strcmp(tmpCStr, "qcheckok")) {
