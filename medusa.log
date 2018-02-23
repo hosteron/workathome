@@ -1,0 +1,1150 @@
+2017-08-15T00:00:06.606088: [M][medusa.c:863] PID file: /tmp/medusa.pid
+2017-08-15T00:00:06.606284: [M][medusa.c:870] lock port: 2012
+2017-08-15T00:00:06.634418: [M][alink/mds_plugin_alink_elem.c:733] Initiating plugin: PLUG_ALINK 
+2017-08-15T00:00:06.639194: [M][plug_audio.c:1355] Initiating plugin: PLUG_AUDIO
+2017-08-15T00:00:06.642639: [M][plug_buf_cmd_to_json_cmd.c:51] Initiating plugin: PLUG_BUF_CMD_TO_JSON_CMD
+2017-08-15T00:00:06.644394: [M][plug_cmd.c:366] Initiating PLUG_CMD
+2017-08-15T00:00:06.646474: [M][plug_dev_status.c:293] Initiating plugin: PLUG_DEV_STATUS
+2017-08-15T00:00:06.649145: [M][plug_fw_v4.c:132] Initiating plugin: fw
+2017-08-15T00:00:06.650799: [M][plug_key_event.c:284] Initiating plugin: PLUG_KEY_EVENT
+2017-08-15T00:00:06.652292: [M][plug_log.c:465] Initiating plugin: PLUG_LOG
+2017-08-15T00:00:06.960484: [M][src/plug_mmi_periph.c:16] Initiating plugin: plug_mmi_periph, VERSION: 0.0.1
+2017-08-15T00:00:06.960699: [M][src/plug_mmi_periph.c:17] --CompileTime:Feb 11 2018 08:45:08--
+2017-08-15T00:00:06.966269: [M][src/mds_warning_elem.c:280] Initiating plugin: WARNING_PLUGIN, VERSION: V0.1.6
+2017-08-15T00:00:06.966452: [M][src/mds_warning_elem.c:281] --CompileTime:Feb  9 2018 09:50:36--
+2017-08-15T00:00:06.968218: [M][plug_mmi_fmt_json.c:1065] Initiating plugin: PLUG_MMI_FMT_JSON
+2017-08-15T00:00:06.976619: [M][plug_network.c:569] Initiating plugin: PLUG_NETWORK
+2017-08-15T00:00:06.978901: [M][proto_converter/mds_plugin_proto_converter_elem.c:338] Initiating plugin: PLUG_PROTO_CONVERTER 
+2017-08-15T00:00:06.981012: [M][plug_sys.c:1951] Initiating plugin: PLUG_SYS
+2017-08-15T00:00:06.981988: [M][plug_time.c:816] Initiating plugin: PLUG_TIME
+2017-08-15T00:00:06.982256: [M][medusa.c:714] Requesting element, class: CMD
+2017-08-15T00:00:06.982385: [M][plug_cmd.c:320] Initiating CMD element: cmd0
+2017-08-15T00:00:06.982681: [D][plug_cmd.c:285] plug_cmd.c:285
+2017-08-15T00:00:06.982729: [M][medusa.c:720] New element: cmd0@0x14518
+2017-08-15T00:00:06.982762: [M][medusa.c:714] Requesting element, class: BufCmdToJsonCmd
+2017-08-15T00:00:06.982795: [M][medusa.c:720] New element: b2j@0x15070
+2017-08-15T00:00:06.982824: [M][medusa.c:714] Requesting element, class: SYS
+2017-08-15T00:00:06.982890: [M][plug_sys.c:1683] default_country_offset  = 2097152
+2017-08-15T00:00:06.982934: [M][plug_sys.c:1689] default_language_offset  = 2097152
+2017-08-15T00:00:06.982966: [M][plug_sys.c:1695] motor_parameters_offset  = 3145728
+2017-08-15T00:00:06.982994: [M][plug_sys.c:1701] ali_parameters_offset  = 1048576
+2017-08-15T00:00:06.983032: [M][plug_sys.c:1707] camera_inner_param_offset  = 4194304
+2017-08-15T00:00:06.983063: [M][plug_sys.c:1713] camera_outer_param_offset  = 4198400
+2017-08-15T00:00:06.983093: [M][plug_sys.c:1720] ali_model = ECOVACS_LIVING_CLEARROBOT_DJ35
+2017-08-15T00:00:06.983120: [M][plug_sys.c:1725] ali_key = BqoPQ86cH3RNulTnMyXk
+2017-08-15T00:00:06.983148: [M][plug_sys.c:1730] ali_secret = fgzV5AwtFp5NpVoG1ggNAZCzzYAu5KYvOVFp6T46
+2017-08-15T00:00:06.983179: [M][plug_sys.c:1827] get pid_bin_file
+2017-08-15T00:00:06.983207: [M][plug_sys.c:1837] pidBinFileOffset  = 0
+2017-08-15T00:00:06.984359: [M][plug_sys.c:745] deviceKey = iTJ8cuIL7BOz7FoYG2vx
+2017-08-15T00:00:06.984518: [M][plug_sys.c:752] deviceSecret = qLwID8Mks6nhrOa1rW2Zuma1r81bLW7F
+2017-08-15T00:00:06.985146: [M][plug_sys.c:783] Camera.fx =       278.992757
+2017-08-15T00:00:06.985293: [M][plug_sys.c:790] Camera.fy =       278.434628
+2017-08-15T00:00:06.985416: [M][plug_sys.c:797] Camera.cx =       320.968554
+2017-08-15T00:00:06.985532: [M][plug_sys.c:804] Camera.cy =       249.711621
+2017-08-15T00:00:06.985642: [M][plug_sys.c:811] Camera.k1 =         0.227829
+2017-08-15T00:00:06.985902: [M][plug_sys.c:818] Camera.k2 =        -0.123438
+2017-08-15T00:00:06.986034: [M][plug_sys.c:825] Camera.p1 =         0.000285
+2017-08-15T00:00:06.986150: [M][plug_sys.c:832] Camera.p2 =         0.000086
+2017-08-15T00:00:06.986261: [M][plug_sys.c:839] Camera.k3 =        -0.006098
+2017-08-15T00:00:06.986371: [M][plug_sys.c:846] Camera.k4 =         0.560288
+2017-08-15T00:00:06.986479: [M][plug_sys.c:853] Camera.k5 =        -0.131484
+2017-08-15T00:00:06.986587: [M][plug_sys.c:860] Camera.k6 =        -0.030534
+2017-08-15T00:00:06.987119: [M][plug_sys.c:886] Camera outer param data[0]=-0.018654
+2017-08-15T00:00:06.987251: [M][plug_sys.c:886] Camera outer param data[1]=0.999126
+2017-08-15T00:00:06.987368: [M][plug_sys.c:886] Camera outer param data[2]=0.037405
+2017-08-15T00:00:06.987477: [M][plug_sys.c:886] Camera outer param data[3]=0.085000
+2017-08-15T00:00:06.987584: [M][plug_sys.c:886] Camera outer param data[4]=-0.999807
+2017-08-15T00:00:06.987690: [M][plug_sys.c:886] Camera outer param data[5]=-0.018871
+2017-08-15T00:00:06.987803: [M][plug_sys.c:886] Camera outer param data[6]=0.005444
+2017-08-15T00:00:06.987909: [M][plug_sys.c:886] Camera outer param data[7]=0.000000
+2017-08-15T00:00:06.988017: [M][plug_sys.c:886] Camera outer param data[8]=0.006145
+2017-08-15T00:00:06.988122: [M][plug_sys.c:886] Camera outer param data[9]=-0.037296
+2017-08-15T00:00:06.988227: [M][plug_sys.c:886] Camera outer param data[10]=0.999285
+2017-08-15T00:00:06.988332: [M][plug_sys.c:886] Camera outer param data[11]=0.000000
+2017-08-15T00:00:06.988437: [M][plug_sys.c:886] Camera outer param data[12]=0.000000
+2017-08-15T00:00:06.988539: [M][plug_sys.c:886] Camera outer param data[13]=0.000000
+2017-08-15T00:00:06.988643: [M][plug_sys.c:886] Camera outer param data[14]=0.000000
+2017-08-15T00:00:06.988746: [M][plug_sys.c:886] Camera outer param data[15]=1.000000
+2017-08-15T00:00:06.989286: [M][plug_sys.c:650] default_country_in_flash  = ZH
+2017-08-15T00:00:06.989714: [M][plug_sys.c:712] default_language_in_flash  = ZH
+2017-08-15T00:00:06.990130: [M][plug_sys.c:620] lbSvr  not exist!!!
+2017-08-15T00:00:06.994816: [M][medusa.c:720] New element: sys0@0x152b8
+2017-08-15T00:00:06.995359: [M][medusa.c:714] Requesting element, class: AUDIO
+2017-08-15T00:00:06.996040: [M][plug_audio.c:1253] sound_num_i_am_here  = 30
+2017-08-15T00:00:06.996293: [M][plug_audio.c:1259] default_others_speaker_volume  = 85
+2017-08-15T00:00:06.996518: [M][plug_audio.c:1265] default_en_speaker_volume  = 85
+2017-08-15T00:00:06.996728: [M][plug_audio.c:1273] default_language_offset  = 2097152
+2017-08-15T00:00:06.997391: [M][plug_audio.c:199] read /data/config/medusa/audio.conf failed
+2017-08-15T00:00:06.998220: [M][plug_audio.c:445] default_language_in_flash  = ZH
+2017-08-15T00:00:07.001096: [M][medusa.c:720] New element: audio0@0x15ea0
+2017-08-15T00:00:07.001469: [M][medusa.c:714] Requesting element, class: ALink
+2017-08-15T00:00:07.002096: [M][medusa.c:720] New element: alink@0x165e8
+2017-08-15T00:00:07.002320: [M][medusa.c:714] Requesting element, class: PROTO_CONVERTER
+2017-08-15T00:00:07.002516: [D][proto_converter/mds_plugin_proto_converter_elem.c:193] protocol converter requested
+2017-08-15T00:00:07.002744: [M][medusa.c:720] New element: proto_converter@0x201b0
+2017-08-15T00:00:07.002983: [M][medusa.c:714] Requesting element, class: KEY_EVENT
+2017-08-15T00:00:07.003250: [M][medusa.c:720] New element: key_event@0x20468
+2017-08-15T00:00:07.003460: [M][medusa.c:714] Requesting element, class: TIME
+2017-08-15T00:00:07.004430: [M][medusa.c:720] New element: time0@0x207d8
+2017-08-15T00:00:07.004664: [M][medusa.c:714] Requesting element, class: SOURCE
+2017-08-15T00:00:07.006638: [M][medusa.c:720] New element: source@0x20d10
+2017-08-15T00:00:07.007001: [M][medusa.c:714] Requesting element, class: PARSE
+2017-08-15T00:00:07.007193: [M][medusa.c:720] New element: parse@0x26800
+2017-08-15T00:00:07.007277: [M][medusa.c:714] Requesting element, class: PACK
+2017-08-15T00:00:07.007356: [M][medusa.c:720] New element: pack@0x26838
+2017-08-15T00:00:07.007411: [M][medusa.c:714] Requesting element, class: WHEEL
+2017-08-15T00:00:07.007560: [M][medusa.c:720] New element: wheel@0x6d8f8
+2017-08-15T00:00:07.007784: [M][medusa.c:714] Requesting element, class: PUBLISHER
+2017-08-15T00:00:07.008000: [M][medusa.c:720] New element: publisher@0x26868
+2017-08-15T00:00:07.008192: [M][medusa.c:714] Requesting element, class: VSLAM
+2017-08-15T00:00:07.033900: [M][medusa.c:720] New element: vslam@0x6ddf8
+2017-08-15T00:00:07.034240: [M][medusa.c:714] Requesting element, class: PLAN
+2017-08-15T00:00:07.154908: [M] PlanMode-> 
+2017-08-15T00:00:07.155343: [M] PlanMode-> TimeStamp: 0 
+2017-08-15T00:00:07.155643: [M] PlanMode-> TimeBase: 0 
+2017-08-15T00:00:07.156011: [M] PlanMode-> #*************Plan_Vslam Version 0.1.6****************# 
+2017-08-15T00:00:07.156335: [M] PlanMode-> --CompileTime: Feb 11 2018 11:10:54 
+2017-08-15T00:00:07.287339: [M][medusa.c:720] New element: plan@0xae68e008
+2017-08-15T00:00:07.287644: [M][medusa.c:714] Requesting element, class: UDP
+2017-08-15T00:00:07.288188: [M][medusa.c:720] New element: udp@0x9abc10
+2017-08-15T00:00:07.288412: [M][medusa.c:714] Requesting element, class: KEY
+2017-08-15T00:00:07.288619: [D][src/mds_plugin_key_handler_elem.c:101] PLUG_KEY requested
+2017-08-15T00:00:07.288867: [M][medusa.c:720] New element: key@0x9abef0
+2017-08-15T00:00:07.289104: [M][medusa.c:714] Requesting element, class: LIGHT
+2017-08-15T00:00:07.289346: [M][medusa.c:720] New element: light@0x9ac140
+2017-08-15T00:00:07.289539: [M][medusa.c:714] Requesting element, class: MOTOR
+2017-08-15T00:00:07.289748: [M][medusa.c:720] New element: motor@0x9ac390
+2017-08-15T00:00:07.289949: [M][medusa.c:714] Requesting element, class: ADC
+2017-08-15T00:00:07.290164: [D][src/mds_plugin_adc_handler_elem.c:76] PLUG_Adc requested
+2017-08-15T00:00:07.290393: [M][medusa.c:720] New element: adc@0x9ac5e0
+2017-08-15T00:00:07.290597: [M][medusa.c:714] Requesting element, class: ERROR
+2017-08-15T00:00:07.290811: [D][src/mds_plugin_error_handler_elem.c:121] PLUG_Error requested
+2017-08-15T00:00:07.291063: [M][medusa.c:720] New element: error@0x9ac840
+2017-08-15T00:00:07.291272: [M][medusa.c:714] Requesting element, class: SWITCH
+2017-08-15T00:00:07.291487: [D][src/mds_plugin_switch_handler_elem.c:79] PLUG_Switch requested
+2017-08-15T00:00:07.291673: [M][medusa.c:720] New element: switch@0x9acad0
+2017-08-15T00:00:07.291868: [M][medusa.c:714] Requesting element, class: LED
+2017-08-15T00:00:07.292096: [D][src/mds_plugin_led_handler_elem.c:81] PLUG_Led requested
+2017-08-15T00:00:07.292324: [M][medusa.c:720] New element: led@0x9acd28
+2017-08-15T00:00:07.292522: [M][medusa.c:714] Requesting element, class: TASK
+2017-08-15T00:00:07.292726: [D][src/task_msg_handle.c:110] PLUG_WorkMode requested
+2017-08-15T00:00:07.293173: [M][medusa.c:720] New element: task@0x9acf80
+2017-08-15T00:00:07.293368: [M][medusa.c:714] Requesting element, class: VOICE
+2017-08-15T00:00:07.293586: [D][src/mds_plugin_voice_handler_elem.c:83] PLUG_Voice requested
+2017-08-15T00:00:07.293828: [M][medusa.c:720] New element: voice@0x9ad218
+2017-08-15T00:00:07.294019: [M][medusa.c:714] Requesting element, class: REMOTE
+2017-08-15T00:00:07.294225: [D][src/mds_plugin_remote_handler_elem.c:104] PLUG_Remote requested
+2017-08-15T00:00:07.294488: [M][medusa.c:720] New element: remote@0x9ad4b8
+2017-08-15T00:00:07.294704: [M][medusa.c:714] Requesting element, class: WIFI
+2017-08-15T00:00:07.294933: [D][src/mds_plugin_wifi_handler_elem.c:87] PLUG_Wifi requested
+2017-08-15T00:00:07.295188: [M][medusa.c:720] New element: wifi@0x9ad750
+2017-08-15T00:00:07.295395: [M][medusa.c:714] Requesting element, class: MAP
+2017-08-15T00:00:07.295709: [D][src/mds_plugin_map_handler_elem.c:94] PLUG_Map requested
+2017-08-15T00:00:07.458334: [M][medusa.c:720] New element: map@0xae41c008
+2017-08-15T00:00:07.458627: [M][medusa.c:714] Requesting element, class: RTC
+2017-08-15T00:00:07.458953: [M][medusa.c:720] New element: rtc@0x9adc40
+2017-08-15T00:00:07.459144: [M][medusa.c:714] Requesting element, class: CHARGE
+2017-08-15T00:00:07.459338: [D][src/mds_plugin_charge_handler_elem.c:93] PLUG_Charge requested
+2017-08-15T00:00:07.459587: [M][medusa.c:720] New element: charge@0x9adec8
+2017-08-15T00:00:07.459808: [M][medusa.c:714] Requesting element, class: SCHEDRTC
+2017-08-15T00:00:07.460025: [D][src/MDS_RTC_HANDLE.c:107] PLUG_Rtc requested
+2017-08-15T00:00:07.460268: [M][medusa.c:720] New element: schedrtc@0x9ae160
+2017-08-15T00:00:07.460466: [M][medusa.c:714] Requesting element, class: FLASH
+2017-08-15T00:00:07.460696: [D][src/task_flash_handle.c:76] PLUG_FlashMode requested
+2017-08-15T00:00:07.487982: [M][medusa.c:720] New element: flash@0x9ae400
+2017-08-15T00:00:07.488391: [M][medusa.c:714] Requesting element, class: WARNING
+2017-08-15T00:00:07.488907: [M][src/warning.c:2388] Warning->_clean_all_Init_abnormal*** 
+2017-08-15T00:00:07.489558: [M][medusa.c:720] New element: warning@0x9ae7c0
+2017-08-15T00:00:07.489804: [M][medusa.c:714] Requesting element, class: PLAYER
+2017-08-15T00:00:07.490085: [M][medusa.c:720] New element: player@0x9aea50
+2017-08-15T00:00:07.490291: [M][medusa.c:714] Requesting element, class: MCUOTA
+2017-08-15T00:00:07.490526: [M][medusa.c:720] New element: mcuota@0x9af390
+2017-08-15T00:00:07.490708: [M][medusa.c:714] Requesting element, class: FW
+2017-08-15T00:00:07.490926: [M][medusa.c:720] New element: fw@0x9af6f0
+2017-08-15T00:00:07.491094: [M][medusa.c:714] Requesting element, class: DEV_STATUS
+2017-08-15T00:00:07.491307: [M][medusa.c:720] New element: DevStatus0@0x9afc88
+2017-08-15T00:00:07.491491: [M][medusa.c:714] Requesting element, class: NETWORK
+2017-08-15T00:00:07.491727: [M][medusa.c:720] New element: nt0@0x9b00d8
+2017-08-15T00:00:07.491941: [M][medusa.c:778] cmd0===>cmd0
+2017-08-15T00:00:07.492128: [M][medusa.c:778] cmd0===>b2j
+2017-08-15T00:00:07.492321: [M][medusa.c:778] b2j===>sys0
+2017-08-15T00:00:07.492507: [M][medusa.c:778] b2j===>audio0
+2017-08-15T00:00:07.492712: [M][medusa.c:778] b2j===>alink
+2017-08-15T00:00:07.492904: [M][medusa.c:778] cmd0===>alink
+2017-08-15T00:00:07.493062: [M][medusa.c:778] sys0===>alink
+2017-08-15T00:00:07.493236: [M][medusa.c:778] alink===>sys0
+2017-08-15T00:00:07.493440: [M][medusa.c:778] alink===>proto_converter
+2017-08-15T00:00:07.493620: [M][medusa.c:778] alink===>DevStatus0
+2017-08-15T00:00:07.493785: [M][medusa.c:778] proto_converter===>alink
+2017-08-15T00:00:07.493942: [M][medusa.c:778] proto_converter===>wifi
+2017-08-15T00:00:07.494106: [M][medusa.c:778] proto_converter===>fw
+2017-08-15T00:00:07.494277: [M][medusa.c:778] fw===>proto_converter
+2017-08-15T00:00:07.494434: [M][medusa.c:778] wifi===>proto_converter
+2017-08-15T00:00:07.494588: [M][medusa.c:778] map===>proto_converter
+2017-08-15T00:00:07.494753: [M][medusa.c:778] error===>proto_converter
+2017-08-15T00:00:07.494907: [M][medusa.c:778] b2j===>key_event
+2017-08-15T00:00:07.495068: [M][medusa.c:778] key_event===>alink
+2017-08-15T00:00:07.495222: [M][medusa.c:778] alink===>time0
+2017-08-15T00:00:07.495374: [M][medusa.c:778] key===>key_event
+2017-08-15T00:00:07.495529: [M][medusa.c:778] b2j===>time0
+2017-08-15T00:00:07.495972: [M][medusa.c:778] b2j===>fw
+2017-08-15T00:00:07.496163: [M][medusa.c:778] b2j===>nt0
+2017-08-15T00:00:07.496329: [M][medusa.c:778] b2j===>DevStatus0
+2017-08-15T00:00:07.496488: [M][medusa.c:778] sys0===>DevStatus0
+2017-08-15T00:00:07.496641: [M][medusa.c:778] alink===>nt0
+2017-08-15T00:00:07.496861: [M][medusa.c:778] publisher===>sys0
+2017-08-15T00:00:07.497040: [M][medusa.c:778] rtc===>time0
+2017-08-15T00:00:07.497236: [M][medusa.c:778] vslam===>sys0
+2017-08-15T00:00:07.497410: [M][medusa.c:778] sys0===>vslam
+2017-08-15T00:00:07.497554: [M][medusa.c:778] source===>parse
+2017-08-15T00:00:07.497719: [M][medusa.c:778] parse===>publisher
+2017-08-15T00:00:07.497882: [M][medusa.c:778] pack===>source
+2017-08-15T00:00:07.498028: [M][medusa.c:778] publisher===>plan
+2017-08-15T00:00:07.498169: [M][medusa.c:778] publisher===>warning
+2017-08-15T00:00:07.498287: [M][medusa.c:778] publisher===>charge
+2017-08-15T00:00:07.498391: [M][medusa.c:778] wheel===>pack
+2017-08-15T00:00:07.498496: [M][medusa.c:778] publisher===>wheel
+2017-08-15T00:00:07.498599: [M][medusa.c:778] publisher===>key
+2017-08-15T00:00:07.498698: [M][medusa.c:778] publisher===>vslam
+2017-08-15T00:00:07.498799: [M][medusa.c:778] vslam===>plan
+2017-08-15T00:00:07.498899: [M][medusa.c:778] vslam===>wheel
+2017-08-15T00:00:07.498998: [M][medusa.c:778] vslam===>task
+2017-08-15T00:00:07.499098: [M][medusa.c:778] key===>plan
+2017-08-15T00:00:07.499197: [M][medusa.c:778] plan===>wheel
+2017-08-15T00:00:07.499297: [M][medusa.c:778] plan===>udp
+2017-08-15T00:00:07.499400: [M][medusa.c:778] key===>light
+2017-08-15T00:00:07.499502: [M][medusa.c:778] key===>motor
+2017-08-15T00:00:07.499604: [M][medusa.c:778] motor===>pack
+2017-08-15T00:00:07.499708: [M][medusa.c:778] light===>pack
+2017-08-15T00:00:07.499805: [M][medusa.c:778] publisher===>adc
+2017-08-15T00:00:07.499915: [M][medusa.c:778] publisher===>switch
+2017-08-15T00:00:07.500018: [M][medusa.c:778] publisher===>task
+2017-08-15T00:00:07.500119: [M][medusa.c:778] publisher===>rtc
+2017-08-15T00:00:07.500222: [M][medusa.c:778] led===>light
+2017-08-15T00:00:07.500323: [M][medusa.c:778] error===>led
+2017-08-15T00:00:07.500422: [M][medusa.c:778] error===>plan
+2017-08-15T00:00:07.500522: [M][medusa.c:778] task===>motor
+2017-08-15T00:00:07.500621: [M][medusa.c:778] error===>voice
+2017-08-15T00:00:07.500720: [M][medusa.c:778] publisher===>remote
+2017-08-15T00:00:07.500819: [M][medusa.c:778] remote===>plan
+2017-08-15T00:00:07.500919: [M][medusa.c:778] key===>wifi
+2017-08-15T00:00:07.501020: [M][medusa.c:778] plan===>map
+2017-08-15T00:00:07.501122: [M][medusa.c:778] key===>flash
+2017-08-15T00:00:07.501224: [M][medusa.c:778] schedrtc===>task
+2017-08-15T00:00:07.501324: [M][medusa.c:778] task===>plan
+2017-08-15T00:00:07.501425: [M][medusa.c:778] rtc===>pack
+2017-08-15T00:00:07.501524: [M][medusa.c:778] remote===>wheel
+2017-08-15T00:00:07.501623: [M][medusa.c:778] wifi===>plan
+2017-08-15T00:00:07.501722: [M][medusa.c:778] wifi===>wheel
+2017-08-15T00:00:07.501821: [M][medusa.c:778] key===>wheel
+2017-08-15T00:00:07.501923: [M][medusa.c:778] player===>audio0
+2017-08-15T00:00:07.502025: [M][medusa.c:778] voice===>player
+2017-08-15T00:00:07.502126: [M][medusa.c:778] wifi===>player
+2017-08-15T00:00:07.502227: [M][medusa.c:778] key===>player
+2017-08-15T00:00:07.502328: [M][medusa.c:778] time0===>rtc
+2017-08-15T00:00:07.502433: [M][medusa.c:778] time0===>wifi
+2017-08-15T00:00:07.502534: [M][medusa.c:778] plan===>task
+2017-08-15T00:00:07.502636: [M][medusa.c:778] task===>player
+2017-08-15T00:00:07.502736: [M][medusa.c:778] task===>proto_converter
+2017-08-15T00:00:07.502835: [M][medusa.c:778] key===>proto_converter
+2017-08-15T00:00:07.502935: [M][medusa.c:778] remote===>proto_converter
+2017-08-15T00:00:07.503038: [M][medusa.c:778] charge===>proto_converter
+2017-08-15T00:00:07.503154: [M][medusa.c:778] b2j===>mcuota
+2017-08-15T00:00:07.503256: [M][medusa.c:778] b2j===>wheel
+2017-08-15T00:00:07.503358: [M][medusa.c:778] b2j===>light
+2017-08-15T00:00:07.503457: [M][medusa.c:778] b2j===>publisher
+2017-08-15T00:00:07.503559: [M][medusa.c:778] mcuota===>source
+2017-08-15T00:00:07.503659: [M][medusa.c:778] mcuota===>pack
+2017-08-15T00:00:07.503759: [M][medusa.c:778] mcuota===>fw
+2017-08-15T00:00:07.503858: [M][medusa.c:778] fw===>mcuota
+2017-08-15T00:00:07.503958: [M][medusa.c:778] cmd0===>fw
+2017-08-15T00:00:07.504061: [M][medusa.c:778] warning===>error
+2017-08-15T00:00:07.504161: [M][medusa.c:778] wifi===>warning
+2017-08-15T00:00:07.504261: [M][medusa.c:778] warning===>wifi
+2017-08-15T00:00:07.504360: [M][medusa.c:778] schedrtc===>proto_converter
+2017-08-15T00:00:07.504460: [M][medusa.c:778] warning===>plan
+2017-08-15T00:00:07.504561: [M][medusa.c:778] plan===>warning
+2017-08-15T00:00:07.504662: [M][medusa.c:778] key===>vslam
+2017-08-15T00:00:07.504761: [M][medusa.c:778] error===>vslam
+2017-08-15T00:00:07.504861: [M][medusa.c:778] remote===>vslam
+2017-08-15T00:00:07.504960: [M][medusa.c:778] task===>vslam
+2017-08-15T00:00:07.505061: [M][medusa.c:778] wifi===>vslam
+2017-08-15T00:00:07.505160: [M][medusa.c:778] task===>wheel
+2017-08-15T00:00:07.505261: [M][medusa.c:778] charge===>wheel
+2017-08-15T00:00:07.505362: [M][medusa.c:778] remote===>player
+2017-08-15T00:00:07.505827: [M][alink/alink.c:449] model=ECOVACS_LIVING_CLEARROBOT_DJ35
+2017-08-15T00:00:07.505983: [M][alink/alink.c:450] key=BqoPQ86cH3RNulTnMyXk
+2017-08-15T00:00:07.506127: [M][alink/alink.c:451] secret=fgzV5AwtFp5NpVoG1ggNAZCzzYAu5KYvOVFp6T46
+2017-08-15T00:00:07.506237: [M][alink/alink.c:452] key=iTJ8cuIL7BOz7FoYG2vx
+2017-08-15T00:00:07.506357: [M][alink/alink.c:453] secret=qLwID8Mks6nhrOa1rW2Zuma1r81bLW7F
+2017-08-15T00:00:07.507288: [M][alink/alink_data_transport.c:291] reporter_worker restart_alink_flag
+2017-08-15T00:00:07.507356: [M][alink/alink_data_transport.c:294] first start alink
+2017-08-15T00:00:07.507389: [M][alink/alink.c:298] alink_init_sdk in
+2017-08-15T00:00:07.508366: [M][alink/alink.c:307] alink_init_sdk connect_network
+2017-08-15T00:00:07.508425: [M][alink/alink.c:314] alink_init_sdk alink_trans_init
+2017-08-15T00:00:07.508458: [M][alink/alink.c:264] alink_trans_init alink_start
+2017-08-15T00:00:07.508671: #033[32m<INFO> [alink_start#135] : 
+2017-08-15T00:00:07.508875: Build Time: Wed Oct 11 10:24:41 CST 2017#033[0m#015
+2017-08-15T00:00:07.508934: #033[32m<INFO> [alink_start#136] : 
+2017-08-15T00:00:07.509082: Git Version: smarthome-ec6bd6b#033[0m#015
+2017-08-15T00:00:07.512122: #033[32m<INFO> [_accs_init#69] : 
+2017-08-15T00:00:07.512218: accs initial#033[0m#015
+2017-08-15T00:00:07.512420: #033[32m<INFO> [_fota_init#57] : 
+2017-08-15T00:00:07.512498: fota initial#033[0m#015
+2017-08-15T00:00:07.512707: #033[32m<INFO> [_alcs_init#60] : 
+2017-08-15T00:00:07.512789: alcs initial#033[0m#015
+2017-08-15T00:00:07.513017: #033[32m<INFO> [_wsf_init#60] : 
+2017-08-15T00:00:07.513082: wsf initial#033[0m#015
+2017-08-15T00:00:07.513655: #033[34m<WARN> [config_init#91] : 
+2017-08-15T00:00:07.513725: config init fail, reset...#033[0m#015
+2017-08-15T00:00:07.513967: #033[37m<DEBUG> [config_dump#112] : 
+2017-08-15T00:00:07.514027: ~~~~~dump device config~~~~~#033[0m#015
+2017-08-15T00:00:07.514193: #033[37m<DEBUG> [config_dump#113] : 
+2017-08-15T00:00:07.514260: magic: Alink+#033[0m#015
+2017-08-15T00:00:07.514403: #033[37m<DEBUG> [config_dump#114] : 
+2017-08-15T00:00:07.514449: version: 1#033[0m#015
+2017-08-15T00:00:07.514639: #033[37m<DEBUG> [config_dump#115] : 
+2017-08-15T00:00:07.514701: log: 15#033[0m#015
+2017-08-15T00:00:07.514858: #033[37m<DEBUG> [config_dump#116] : 
+2017-08-15T00:00:07.514917: uuid: #033[0m#015
+2017-08-15T00:00:07.515107: #033[37m<DEBUG> [config_dump#117] : 
+2017-08-15T00:00:07.515182: token: #033[0m#015
+2017-08-15T00:00:07.515377: #033[37m<DEBUG> [config_dump#118] : 
+2017-08-15T00:00:07.515462: alinkserver: online/alink.tcp.aliyun.com:443#033[0m#015
+2017-08-15T00:00:07.515749: #033[37m<DEBUG> [config_dump#119] : 
+2017-08-15T00:00:07.515824: heartbeat: 12#033[0m#015
+2017-08-15T00:00:07.516037: #033[37m<DEBUG> [config_dump#120] : 
+2017-08-15T00:00:07.516114: reqtimeout: 6#033[0m#015
+2017-08-15T00:00:07.516286: #033[37m<DEBUG> [config_dump#121] : 
+2017-08-15T00:00:07.516344: dev_version: #033[0m#015
+2017-08-15T00:00:07.516494: #033[37m<DEBUG> [config_dump#122] : 
+2017-08-15T00:00:07.516551: ota_version: #033[0m#015
+2017-08-15T00:00:07.516713: #033[37m<DEBUG> [config_dump#123] : 
+2017-08-15T00:00:07.516784: crc: 19287#033[0m#015
+2017-08-15T00:00:07.520892: #033[37m<DEBUG> [config_dump#124] : 
+2017-08-15T00:00:07.521284: ~~~~~~~~~~~~~~~~~~~~~~~~~~#033[0m#015
+2017-08-15T00:00:07.522121: #033[37m<DEBUG> [devinfo_dump#62] : 
+2017-08-15T00:00:07.522491: ~~~~~dump device info~~~~~#033[0m#015
+2017-08-15T00:00:07.522814: #033[37m<DEBUG> [devinfo_dump#63] : 
+2017-08-15T00:00:07.523111: sn: EPLAT20171122test012#033[0m#015
+2017-08-15T00:00:07.523418: #033[37m<DEBUG> [devinfo_dump#64] : 
+2017-08-15T00:00:07.523764: cid: rtl8188eu 12345678#033[0m#015
+2017-08-15T00:00:07.523826: #033[37m<DEBUG> [devinfo_dump#65] : 
+2017-08-15T00:00:07.523982: mac: 60:C6:A9:E1:1E:E4#033[0m#015
+2017-08-15T00:00:07.524048: #033[37m<DEBUG> [devinfo_dump#66] : 
+2017-08-15T00:00:07.524331: model: ECOVACS_LIVING_CLEARROBOT_DJ35#033[0m#015
+2017-08-15T00:00:07.524408: #033[37m<DEBUG> [devinfo_dump#67] : 
+2017-08-15T00:00:07.524590: os_version: Linux version 3.18.66 (jack@jac#033[0m#015
+2017-08-15T00:00:07.524675: #033[37m<DEBUG> [devinfo_dump#68] : 
+2017-08-15T00:00:07.524844: alink_version: 1.0.1#033[0m#015
+2017-08-15T00:00:07.524906: #033[37m<DEBUG> [devinfo_dump#69] : 
+2017-08-15T00:00:07.525066: firmware_version: 0.0.1#033[0m#015
+2017-08-15T00:00:07.525123: #033[37m<DEBUG> [devinfo_dump#70] : 
+2017-08-15T00:00:07.525158: key: BqoPQ86cH3RNulTnMyXk#033[0m#015
+2017-08-15T00:00:07.525196: #033[37m<DEBUG> [devinfo_dump#71] : 
+2017-08-15T00:00:07.525229: secret: fgzV5AwtFp5NpVoG1ggNAZCzzYAu5KYvOVFp6T46#033[0m#015
+2017-08-15T00:00:07.525461: #033[37m<DEBUG> [devinfo_dump#72] : 
+2017-08-15T00:00:07.525522: debug_key: dpZZEpm9eBfqzK7yVeLq#033[0m#015
+2017-08-15T00:00:07.525877: #033[37m<DEBUG> [devinfo_dump#73] : 
+2017-08-15T00:00:07.525966: debug_secret: THnfRRsU5vu6g6m9X6uFyAjUWflgZ0iyGjdEneKm#033[0m#015
+2017-08-15T00:00:07.526239: #033[37m<DEBUG> [devinfo_dump#75] : 
+2017-08-15T00:00:07.526316: device key: iTJ8cuIL7BOz7FoYG2vx#033[0m#015
+2017-08-15T00:00:07.526505: #033[37m<DEBUG> [devinfo_dump#76] : 
+2017-08-15T00:00:07.526579: device secret: qLwID8Mks6nhrOa1rW2Zuma1r81bLW7F#033[0m#015
+2017-08-15T00:00:07.526742: #033[37m<DEBUG> [devinfo_dump#78] : 
+2017-08-15T00:00:07.526816: A[1.0.1|smarthome-ec6bd6b|0000]OS[Linux version 3.18.66 (jack@jac]T[unknown module.1507688681]#033[0m#015
+2017-08-15T00:00:07.526966: #033[37m<DEBUG> [devinfo_dump#79] : 
+2017-08-15T00:00:07.527029: ~~~~~~~~~~~~~~~~~~~~~~~~~~#033[0m#015
+2017-08-15T00:00:07.527236: #033[37m<DEBUG> [accs_add_listener#151] : 
+2017-08-15T00:00:07.527298: accs add listerner: 0xb1202a0c#012#033[0m#015
+2017-08-15T00:00:07.527479: #033[32m<INFO> [fota_prepare#148] : 
+2017-08-15T00:00:07.527544: fota_prepare#033[0m#015
+2017-08-15T00:00:07.527735: #033[37m<DEBUG> [accs_add_listener#151] : 
+2017-08-15T00:00:07.527790: accs add listerner: 0xb121270c#012#033[0m#015
+2017-08-15T00:00:07.527961: #033[32m<INFO> [wsf_connect#68] : 
+2017-08-15T00:00:07.528021: wsf_connect#033[0m#015
+2017-08-15T00:00:07.528217: #033[37m<DEBUG> [config_get_server_info#198] : 
+2017-08-15T00:00:07.528276: ip alink.tcp.aliyun.com port 443#033[0m#015
+2017-08-15T00:00:07.528472: #033[32m<INFO> [wsf_init#90] : 
+2017-08-15T00:00:07.528524: wsf initializing...#012#033[0m#015
+2017-08-15T00:00:07.528605: #033[32m<INFO> [wsf_reset_connection#92] : 
+2017-08-15T00:00:07.528987: wsf: reset connection#033[0m#015
+2017-08-15T00:00:07.529276: #033[37m<DEBUG> [wsf_set_state#149] : 
+2017-08-15T00:00:07.529821: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2017-08-15T00:00:07.531384: #033[32m<INFO> [system_monitor#59] : 
+2017-08-15T00:00:07.531509: sdk memory usage: peak 9653, current 9653#033[0m#015
+2017-08-15T00:00:07.534037: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2017-08-15T00:00:07.534113: can't estatblish tcp connection.#033[0m#015
+2017-08-15T00:00:07.534148: #033[33m<ERROR> [wsf_init#108] : 
+2017-08-15T00:00:07.534177: failed to open wsf connection#033[0m#015
+2017-08-15T00:00:07.535000: #033[37m<DEBUG> [accs_add_listener#151] : 
+2017-08-15T00:00:07.535324: accs add listerner: 0xb12001ec#012#033[0m#015
+2017-08-15T00:00:07.535578: [M][alink/alink.c:271] alink_trans_init alink_wait_connect
+2017-08-15T00:00:07.676726: [M][plug_sys.c:920] mcu verion = 0.1.2
+2017-08-15T00:00:07.676942: [M][plug_sys.c:928] mcu hardware verion = 0.0.2
+2017-08-15T00:00:07.712214: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:WorkMode
+2017-08-15T00:00:07.712502: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"SetState":{"value":"standby"}}
+2017-08-15T00:00:07.712598: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:07.712636: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:07.712702: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:07.882246: [D][plug_cmd.c:228] recv:{"request":"netmon","todo":"notify","type":"WIFI","state":"online","ssid":"ECOM4F-RD5-test10","rssi":73,"IPv4.Configuration":{"Address":"192.168.3.31","Gateway":"192.168.3.1"}}
+2017-08-15T00:00:08.512260: [M][src/mds_plugin_error_handler_elem.c:408] adc 0 0 0 0 0 
+2017-08-15T00:00:11.797214: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BatteryInfo
+2017-08-15T00:00:11.797405: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BatteryStatus":{"value":"056"}}
+2017-08-15T00:00:11.797498: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:11.797580: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:11.797675: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:19.536311: #033[32m<INFO> [wsf_keep_connection#533] : 
+2017-08-15T00:00:19.536439: try to reconnect#033[0m#015
+2017-08-15T00:00:19.536566: #033[32m<INFO> [wsf_reset_connection#92] : 
+2017-08-15T00:00:19.536657: wsf: reset connection#033[0m#015
+2017-08-15T00:00:19.536763: #033[37m<DEBUG> [wsf_set_state#149] : 
+2017-08-15T00:00:19.536855: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2017-08-15T00:00:19.846603: #033[37m<DEBUG> [wsf_set_state#149] : 
+2017-08-15T00:00:19.847063: CONNECT_STATE_CLOSE -> CONNECT_STATE_READY#033[0m#015
+2017-08-15T00:00:19.848235: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:19.848375: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"ecdd7e66822793507315c802c9b68117","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":""},"method":"registerDevice","params":{"model":"ECOVACS_LIVING_CLEARROBOT_DJ35","sn":"EPLAT20171122test012","mac":"60:C6:A9:E1:1E:E4","version":"0.0.1;APP2.0;OTA1.0","description":"A[1.0.1|smarthome-ec6bd6b|0000]OS[Linux version 3.18.66 (jack@jac]T[unknown module.1507688681]"},"id":100}#033[0m#015
+2017-08-15T00:00:19.936754: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:19.936914: response: {"result":{"code":1000,"msg":"success","data":{"uuid":"136B2343870B566215178B5A06883E1B"}},"id":100}#033[0m#015
+2017-08-15T00:00:19.937804: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:19.937943: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"loginDevice","params":{"sdkversion":"A[1.0.1|smarthome-ec6bd6b|0000]OS[Linux version 3.18.66 (jack@jac]T[unknown module.1507688681]"},"id": 101}#033[0m#015
+2017-08-15T00:00:19.986845: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:19.986978: response: {"result":{"code":1000,"msg":"success"},"id":101}#033[0m#015
+2017-08-15T00:00:19.987123: #033[32m<INFO> [alink_handshake#720] : 
+2017-08-15T00:00:19.987208: accs_handshake success#033[0m#015
+2017-08-15T00:00:19.987303: #033[37m<DEBUG> [fota_listener#225] : 
+2017-08-15T00:00:19.987384: login#033[0m#015
+2017-08-15T00:00:19.987525: #033[37m<DEBUG> [alink_post_ota_msg#225] : 
+2017-08-15T00:00:19.987643: alink_post_ota_msg#033[0m#015
+2017-08-15T00:00:19.987747: #033[37m<DEBUG> [alink_post_ota_msg#232] : 
+2017-08-15T00:00:19.987846: alink_post_ota_msg [0.0.1][] []#033[0m#015
+2017-08-15T00:00:19.988491: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:19.988628: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"device.updateVersion","params":{"uuid" :"136B2343870B566215178B5A06883E1B","version":"0.0.1;APP2.0;OTA1.0","description":"A[1.0.1|smarthome-ec6bd6b|0000]OS[Linux version 3.18.66 (jack@jac]T[unknown module.1507688681]"},"id":102}#033[0m#015
+2017-08-15T00:00:20.050478: [M][alink/alink.c:278] alink_trans_init out
+2017-08-15T00:00:20.050609: [M][alink/alink.c:321] alink_init_sdk out
+2017-08-15T00:00:20.050698: [M][alink/alink_data_transport.c:304] report_data start
+2017-08-15T00:00:20.050877: [M][alink/alink_data_transport.c:219] report data={"SetState":{"value":"standby"}}
+2017-08-15T00:00:20.056712: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:20.056964: response: {"result":{"code":1000,"msg":"success"},"id":102}#033[0m#015
+2017-08-15T00:00:20.057230: #033[37m<DEBUG> [post_dev_version#215] : 
+2017-08-15T00:00:20.057401: alink_ota_status_post: {"uuid" :"136B2343870B566215178B5A06883E1B","version":"0.0.1;APP2.0;OTA1.0","description":"A[1.0.1|smarthome-ec6bd6b|0000]OS[Linux version 3.18.66 (jack@jac]T[unknown module.1507688681]"}, ret=0#012#033[0m#015
+2017-08-15T00:00:20.057502: #033[37m<DEBUG> [alink_post_ota_msg#246] : 
+2017-08-15T00:00:20.057635: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:20.057841: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"SetState":{"value":"standby"}},"id":103}#033[0m#015
+2017-08-15T00:00:20.057961: Save dev version to config#033[0m#015
+2017-08-15T00:00:20.058174: [M][alink/alink.c:185] #################g_alink_conn.restart_alink_flag=0
+2017-08-15T00:00:20.058277: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json=alink connected
+2017-08-15T00:00:20.058378: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.058471: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.058643: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.126680: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:20.126819: response: {"result":{"code":1000,"msg":"success"},"id":103}#033[0m#015
+2017-08-15T00:00:20.126992: [M][alink/alink_data_transport.c:222] alink_report ok
+2017-08-15T00:00:20.127092: [M][alink/alink_data_transport.c:219] report data={"BatteryStatus":{"value":"056"}}
+2017-08-15T00:00:20.127336: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:20.127433: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"BatteryStatus":{"value":"056"}},"id":104}#033[0m#015
+2017-08-15T00:00:20.186710: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:20.186853: response: {"result":{"code":1000,"msg":"success"},"id":104}#033[0m#015
+2017-08-15T00:00:20.187030: [M][alink/alink_data_transport.c:222] alink_report ok
+2017-08-15T00:00:20.187128: [M][alink/alink_data_transport.c:239] report data msg EVENT_QUERY_NET_TIME
+2017-08-15T00:00:20.187369: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:20.187541: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"getAlinkTime","params":{},"id":105}#033[0m#015
+2017-08-15T00:00:20.266808: #033[37m<DEBUG> [wsf_send#112] : 
+2017-08-15T00:00:20.266956: response: {"result":{"code":1000,"msg":"success","data":{"time":"1519366276"}},"id":105}#033[0m#015
+2017-08-15T00:00:20.267161: [M][alink/alink_data_transport.c:253] cloud_connected timeStr={"todo":"time","cmd":"set_time","seconds":1519366276} len=53
+2017-08-15T00:00:20.267268: [M][alink/alink_data_transport.c:92] get_device_status rqueue_write ret=0 json len=53 
+2017-08-15T00:00:20.267647: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"OTAResult":{"value":""}}
+2017-08-15T00:00:20.267802: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.267890: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.267992: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.268222: [D][proto_converter/mds_plugin_proto_converter_elem.c:275] handle command:NetState str=connected
+2017-08-15T00:00:20.268483: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:LifeSpan
+2017-08-15T00:00:20.268648: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"RollingBrushLife":{"value":"100,150"}}
+2017-08-15T00:00:20.268736: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.268842: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.268938: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.269159: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:LifeSpan
+2017-08-15T00:00:20.269307: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"SideBrushLife":{"value":"100,150"}}
+2017-08-15T00:00:20.269450: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.269536: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.269698: #033[37m<DEBUG> [wsf_send#96] : 
+2017-08-15T00:00:20.269737: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.269799: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"debug.postDebugInfo","params":{"uuid":"136B2343870B566215178B5A06883E1B", "statastics":{"time":"4294901"}},"id":106}#033[0m#015
+2017-08-15T00:00:20.269971: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:LifeSpan
+2017-08-15T00:00:20.270210: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"HepaLife":{"value":"100,150"}}
+2017-08-15T00:00:20.270324: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.270412: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.270516: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.271625: [M][alink/alink_data_transport.c:219] report data={"OTAResult":{"value":""}}
+2017-08-15T00:00:20.271736: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:AllSched
+2017-08-15T00:00:20.271948: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"AllSched":{"value":""}}
+2017-08-15T00:00:20.272042: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.272128: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.272227: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.272720: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:CleanReport
+2017-08-15T00:00:20.272876: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"SetState":{"value":"stopClean"}}
+2017-08-15T00:00:20.272967: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.273099: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.273194: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.273304: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:CleanReport
+2017-08-15T00:00:20.273425: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"SetState":{"value":"stopClean"}}
+2017-08-15T00:00:20.273661: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.273773: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.273868: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.274147: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:OnOff
+2017-08-15T00:00:20.274544: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BlockMode":{"value":"0"}}
+2017-08-15T00:00:20.274863: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.275156: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.275474: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.276018: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:OnOff
+2017-08-15T00:00:20.276428: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"Mute":{"value":"1"}}
+2017-08-15T00:00:20.276790: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.277101: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.277475: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.277913: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:OnOff
+2017-08-15T00:00:20.278319: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"Light":{"value":"1"}}
+2017-08-15T00:00:20.278659: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.278985: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.279309: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.279713: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:OnOff
+2017-08-15T00:00:20.280071: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"SweepSet":{"value":"0"}}
+2017-08-15T00:00:20.280390: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.280702: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.281022: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.281470: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BlockTime
+2017-08-15T00:00:20.281833: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BlockTime":{"value":"22:00#08:00"}}
+2017-08-15T00:00:20.282158: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.282462: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.282772: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.283564: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:WaterPermeability
+2017-08-15T00:00:20.283923: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"Spary":{"value":"1"}}
+2017-08-15T00:00:20.284240: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.284548: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.284855: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.285250: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BatteryInfo
+2017-08-15T00:00:20.285619: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BatteryStatus":{"value":"056"}}
+2017-08-15T00:00:20.286012: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.286097: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.286196: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.286329: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:ChargeState
+2017-08-15T00:00:20.286398: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"ChargingStatus":{"value":"idle"}}
+2017-08-15T00:00:20.286443: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2017-08-15T00:00:20.286483: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2017-08-15T00:00:20.286530: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2017-08-15T00:00:20.311581: [M][src/mds_plugin_wifi_handler_elem.c:174] MdsMyWifiHandlerProcess get request##########{"todo":"utctime","cmd":"set","from":"net","timezone":"+8","seconds":"1519366276"}
+2018-02-23T06:11:16.000237: #033[34m<WARN> [__wsf_invoke_sync#447] : 
+2018-02-23T06:11:16.000323: waiting response id=8 timeout#033[0m#015
+2018-02-23T06:11:16.000417: #033[33m<ERROR> [wsf_send#118] : 
+2018-02-23T06:11:16.000464: wsf_invoke:6#033[0m#015
+2018-02-23T06:11:16.000546: #033[33m<ERROR> [alink_error_code_handler#670] : 
+2018-02-23T06:11:16.000652: alink err code: -2, ignore#033[0m#015
+2018-02-23T06:11:16.000743: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.000804: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"OTAResult":{"value":""}},"id":107}#033[0m#015
+2018-02-23T06:11:16.014361: #033[34m<WARN> [process_msg_response#73] : 
+2018-02-23T06:11:16.014462: unknown response msg#033[0m#015
+2018-02-23T06:11:16.026796: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"FWVersion":{"value":"0.1.8"}}
+2018-02-23T06:11:16.027310: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:11:16.027762: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:11:16.028544: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:11:16.029133: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"Network":{"value":"192.168.3.31,ECOM4F-RD5-test10,73"}}
+2018-02-23T06:11:16.029588: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:11:16.030015: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:11:16.030460: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:11:16.085918: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.086182: response: {"result":{"code":1000,"msg":"success"},"id":107}#033[0m#015
+2018-02-23T06:11:16.086533: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.086757: [M][alink/alink_data_transport.c:219] report data={"RollingBrushLife":{"value":"100,150"}}
+2018-02-23T06:11:16.087117: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.087247: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"RollingBrushLife":{"value":"100,150"}},"id":108}#033[0m#015
+2018-02-23T06:11:16.164828: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.164888: response: {"result":{"code":1000,"msg":"success"},"id":108}#033[0m#015
+2018-02-23T06:11:16.164942: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.164996: [M][alink/alink_data_transport.c:219] report data={"SideBrushLife":{"value":"100,150"}}
+2018-02-23T06:11:16.165159: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.165205: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"SideBrushLife":{"value":"100,150"}},"id":109}#033[0m#015
+2018-02-23T06:11:16.234826: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.234958: response: {"result":{"code":1000,"msg":"success"},"id":109}#033[0m#015
+2018-02-23T06:11:16.235061: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.235117: [M][alink/alink_data_transport.c:219] report data={"HepaLife":{"value":"100,150"}}
+2018-02-23T06:11:16.235285: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.235336: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"HepaLife":{"value":"100,150"}},"id":110}#033[0m#015
+2018-02-23T06:11:16.262858: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:MapMajorV3
+2018-02-23T06:11:16.263131: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"MapMajorV3":{"value":{"w":"8","h":"16","minorW":"100","minorH":"50","curX":"","curY":"","curMinorX":"","curMinorY":"","v":"10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},"when":"1519337476"}}
+2018-02-23T06:11:16.263259: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:11:16.263363: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:11:16.263473: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:11:16.265146: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:MapMinorV3
+2018-02-23T06:11:16.265509: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"MapMinorV3":{"value":{"x":"000","y":"000","v":"0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101"},"when":"1519337476"}}
+2018-02-23T06:11:16.265604: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:11:16.265681: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:11:16.265717: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:11:16.294177: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.294227: response: {"result":{"code":1000,"msg":"success"},"id":110}#033[0m#015
+2018-02-23T06:11:16.294278: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.294313: [M][alink/alink_data_transport.c:219] report data={"AllSched":{"value":""}}
+2018-02-23T06:11:16.294400: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.294431: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"AllSched":{"value":""}},"id":111}#033[0m#015
+2018-02-23T06:11:16.364724: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.364914: response: {"result":{"code":1000,"msg":"success"},"id":111}#033[0m#015
+2018-02-23T06:11:16.365053: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.365149: [M][alink/alink_data_transport.c:219] report data={"SetState":{"value":"stopClean"}}
+2018-02-23T06:11:16.365391: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.365520: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"SetState":{"value":"stopClean"}},"id":112}#033[0m#015
+2018-02-23T06:11:16.424732: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.424873: response: {"result":{"code":1000,"msg":"success"},"id":112}#033[0m#015
+2018-02-23T06:11:16.425012: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.425111: [M][alink/alink_data_transport.c:219] report data={"SetState":{"value":"stopClean"}}
+2018-02-23T06:11:16.425354: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.425448: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"SetState":{"value":"stopClean"}},"id":113}#033[0m#015
+2018-02-23T06:11:16.484784: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.484916: response: {"result":{"code":1000,"msg":"success"},"id":113}#033[0m#015
+2018-02-23T06:11:16.485051: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.485150: [M][alink/alink_data_transport.c:219] report data={"BlockMode":{"value":"0"}}
+2018-02-23T06:11:16.485393: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.485488: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"BlockMode":{"value":"0"}},"id":114}#033[0m#015
+2018-02-23T06:11:16.554625: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.554767: response: {"result":{"code":1000,"msg":"success"},"id":114}#033[0m#015
+2018-02-23T06:11:16.554903: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.555005: [M][alink/alink_data_transport.c:219] report data={"Mute":{"value":"1"}}
+2018-02-23T06:11:16.555258: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.555355: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"Mute":{"value":"1"}},"id":115}#033[0m#015
+2018-02-23T06:11:16.614677: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.614852: response: {"result":{"code":1000,"msg":"success"},"id":115}#033[0m#015
+2018-02-23T06:11:16.614989: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.615086: [M][alink/alink_data_transport.c:219] report data={"Light":{"value":"1"}}
+2018-02-23T06:11:16.615325: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.615422: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"Light":{"value":"1"}},"id":116}#033[0m#015
+2018-02-23T06:11:16.674723: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.674905: response: {"result":{"code":1000,"msg":"success"},"id":116}#033[0m#015
+2018-02-23T06:11:16.675067: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.675189: [M][alink/alink_data_transport.c:219] report data={"SweepSet":{"value":"0"}}
+2018-02-23T06:11:16.675448: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.675606: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"SweepSet":{"value":"0"}},"id":117}#033[0m#015
+2018-02-23T06:11:16.734880: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.735023: response: {"result":{"code":1000,"msg":"success"},"id":117}#033[0m#015
+2018-02-23T06:11:16.735161: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.735259: [M][alink/alink_data_transport.c:219] report data={"BlockTime":{"value":"22:00#08:00"}}
+2018-02-23T06:11:16.735504: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.735600: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"BlockTime":{"value":"22:00#08:00"}},"id":118}#033[0m#015
+2018-02-23T06:11:16.794736: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.794879: response: {"result":{"code":1000,"msg":"success"},"id":118}#033[0m#015
+2018-02-23T06:11:16.795014: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.795111: [M][alink/alink_data_transport.c:219] report data={"Spary":{"value":"1"}}
+2018-02-23T06:11:16.795354: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.795450: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"Spary":{"value":"1"}},"id":119}#033[0m#015
+2018-02-23T06:11:16.864675: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.864823: response: {"result":{"code":1000,"msg":"success"},"id":119}#033[0m#015
+2018-02-23T06:11:16.864956: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.865052: [M][alink/alink_data_transport.c:219] report data={"BatteryStatus":{"value":"056"}}
+2018-02-23T06:11:16.865291: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.865423: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"BatteryStatus":{"value":"056"}},"id":120}#033[0m#015
+2018-02-23T06:11:16.924704: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.924849: response: {"result":{"code":1000,"msg":"success"},"id":120}#033[0m#015
+2018-02-23T06:11:16.924984: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.925133: [M][alink/alink_data_transport.c:219] report data={"ChargingStatus":{"value":"idle"}}
+2018-02-23T06:11:16.925427: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.925627: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"ChargingStatus":{"value":"idle"}},"id":121}#033[0m#015
+2018-02-23T06:11:16.984742: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:16.984881: response: {"result":{"code":1000,"msg":"success"},"id":121}#033[0m#015
+2018-02-23T06:11:16.985016: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:16.985118: [M][alink/alink_data_transport.c:219] report data={"FWVersion":{"value":"0.1.8"}}
+2018-02-23T06:11:16.985359: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:16.985455: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"FWVersion":{"value":"0.1.8"}},"id":122}#033[0m#015
+2018-02-23T06:11:17.054655: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:17.054797: response: {"result":{"code":1000,"msg":"success"},"id":122}#033[0m#015
+2018-02-23T06:11:17.054929: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:17.055031: [M][alink/alink_data_transport.c:219] report data={"Network":{"value":"192.168.3.31,ECOM4F-RD5-test10,73"}}
+2018-02-23T06:11:17.055274: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:17.055370: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"Network":{"value":"192.168.3.31,ECOM4F-RD5-test10,73"}},"id":123}#033[0m#015
+2018-02-23T06:11:17.114634: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:17.114780: response: {"result":{"code":1000,"msg":"success"},"id":123}#033[0m#015
+2018-02-23T06:11:17.114925: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:17.115037: [M][alink/alink_data_transport.c:219] report data={"MapMajorV3":{"value":{"w":"8","h":"16","minorW":"100","minorH":"50","curX":"","curY":"","curMinorX":"","curMinorY":"","v":"10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},"when":"1519337476"}}
+2018-02-23T06:11:17.115289: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:17.115482: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"MapMajorV3":{"value":{"w":"8","h":"16","minorW":"100","minorH":"50","curX":"","curY":"","curMinorX":"","curMinorY":"","v":"10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},"when":"1519337476"}},"id":124}#033[0m#015
+2018-02-23T06:11:17.184752: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:17.184900: response: {"result":{"code":1000,"msg":"success"},"id":124}#033[0m#015
+2018-02-23T06:11:17.185042: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:11:17.185156: [M][alink/alink_data_transport.c:219] report data={"MapMinorV3":{"value":{"x":"000","y":"000","v":"0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101"},"when":"1519337476"}}
+2018-02-23T06:11:17.185428: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:11:17.185636: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"MapMinorV3":{"value":{"x":"000","y":"000","v":"0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101"},"when":"1519337476"}},"id":125}#033[0m#015
+2018-02-23T06:11:17.244930: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:11:17.245076: response: {"result":{"code":1000,"msg":"success"},"id":125}#033[0m#015
+2018-02-23T06:11:17.245216: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:12:03.685151: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:12:03.685291: sdk memory usage: peak 13365, current 9899#033[0m#015
+2018-02-23T06:13:03.685606: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:13:03.685746: sdk memory usage: peak 13365, current 9899#033[0m#015
+2018-02-23T06:13:12.474435: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BatteryInfo
+2018-02-23T06:13:12.475179: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BatteryStatus":{"value":"055"}}
+2018-02-23T06:13:12.475662: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:13:12.476169: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:13:12.476672: [M][alink/alink_data_transport.c:219] report data={"BatteryStatus":{"value":"055"}}
+2018-02-23T06:13:12.476953: #033[37m<DEBUG> [wsf_send#96] : 
+2018-02-23T06:13:12.477053: wsf_send: {"system":{"alink":"1.0.1","jsonrpc":"2.0","lang":"en","sign":"e75ec15d4491b7587debd84889b9f3b3","key":"iTJ8cuIL7BOz7FoYG2vx","time":""},"request":{"cid":"rtl8188eu 12345678","rspID":-1,"target":"","token":"","uuid":"136B2343870B566215178B5A06883E1B"},"method":"postDeviceData","params":{"BatteryStatus":{"value":"055"}},"id":126}#033[0m#015
+2018-02-23T06:13:12.478294: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:13:12.574782: #033[37m<DEBUG> [wsf_send#112] : 
+2018-02-23T06:13:12.574922: response: {"result":{"code":1000,"msg":"success"},"id":126}#033[0m#015
+2018-02-23T06:13:12.575062: [M][alink/alink_data_transport.c:222] alink_report ok
+2018-02-23T06:13:16.760687: [D][plug_cmd.c:228] recv:{"request":"netmon","todo":"notify","type":"WIFI","state":"idle"}
+2018-02-23T06:14:00.612625: #033[33m<ERROR> [receive_worker#375] : 
+2018-02-23T06:14:00.612763: wsf: heartbeat timeout, reconnect#033[0m#015
+2018-02-23T06:14:00.612864: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:00.612951: wsf: reset connection#033[0m#015
+2018-02-23T06:14:00.613925: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:00.614106: CONNECT_STATE_READY -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:00.614259: [M][alink/alink_data_transport.c:92] get_device_status rqueue_write ret=0 json len=0 
+2018-02-23T06:14:00.614425: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:14:00.615108: [D][proto_converter/mds_plugin_proto_converter_elem.c:275] handle command:NetState str=disconnected
+2018-02-23T06:14:00.615329: try to reconnect#033[0m#015
+2018-02-23T06:14:00.615476: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:00.615565: wsf: reset connection#033[0m#015
+2018-02-23T06:14:00.615724: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:00.615816: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:00.619629: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:14:00.620143: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:14:00.620605: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:14:00.621055: failed to setup the link#033[0m#015
+2018-02-23T06:14:03.685752: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:14:03.685892: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:14:12.621683: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:14:12.621834: try to reconnect#033[0m#015
+2018-02-23T06:14:12.621935: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:12.622022: wsf: reset connection#033[0m#015
+2018-02-23T06:14:12.622126: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:12.622218: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:12.624360: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:14:12.624495: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:14:12.624593: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:14:12.624680: failed to setup the link#033[0m#015
+2018-02-23T06:14:24.624985: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:14:24.625118: try to reconnect#033[0m#015
+2018-02-23T06:14:24.625224: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:24.625355: wsf: reset connection#033[0m#015
+2018-02-23T06:14:24.625464: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:24.625558: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:24.627713: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:14:24.627849: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:14:24.627943: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:14:24.628026: failed to setup the link#033[0m#015
+2018-02-23T06:14:36.628327: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:14:36.628463: try to reconnect#033[0m#015
+2018-02-23T06:14:36.628566: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:36.628655: wsf: reset connection#033[0m#015
+2018-02-23T06:14:36.628762: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:36.628854: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:36.630845: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:14:36.630977: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:14:36.631072: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:14:36.631156: failed to setup the link#033[0m#015
+2018-02-23T06:14:48.631439: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:14:48.631582: try to reconnect#033[0m#015
+2018-02-23T06:14:48.631686: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:14:48.631818: wsf: reset connection#033[0m#015
+2018-02-23T06:14:48.631925: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:14:48.632018: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:14:48.634221: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:14:48.634361: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:14:48.634459: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:14:48.634543: failed to setup the link#033[0m#015
+2018-02-23T06:15:00.634855: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:15:00.635028: try to reconnect#033[0m#015
+2018-02-23T06:15:00.635132: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:15:00.635220: wsf: reset connection#033[0m#015
+2018-02-23T06:15:00.635323: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:15:00.635414: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:15:00.637431: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:15:00.637572: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:15:00.637671: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:15:00.637757: failed to setup the link#033[0m#015
+2018-02-23T06:15:03.686213: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:15:03.686351: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:15:12.638051: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:15:12.638187: try to reconnect#033[0m#015
+2018-02-23T06:15:12.638288: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:15:12.638373: wsf: reset connection#033[0m#015
+2018-02-23T06:15:12.638475: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:15:12.638566: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:15:12.640515: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:15:12.640649: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:15:12.640746: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:15:12.640829: failed to setup the link#033[0m#015
+2018-02-23T06:15:24.641088: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:15:24.641219: try to reconnect#033[0m#015
+2018-02-23T06:15:24.641323: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:15:24.641411: wsf: reset connection#033[0m#015
+2018-02-23T06:15:24.641513: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:15:24.641604: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:15:24.643776: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:15:24.643923: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:15:24.644025: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:15:24.644112: failed to setup the link#033[0m#015
+2018-02-23T06:15:36.644397: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:15:36.644543: try to reconnect#033[0m#015
+2018-02-23T06:15:36.644649: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:15:36.644733: wsf: reset connection#033[0m#015
+2018-02-23T06:15:36.644834: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:15:36.644923: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:15:36.646931: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:15:36.647084: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:15:36.647181: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:15:36.647366: failed to setup the link#033[0m#015
+2018-02-23T06:15:48.647645: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:15:48.647776: try to reconnect#033[0m#015
+2018-02-23T06:15:48.647916: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:15:48.648008: wsf: reset connection#033[0m#015
+2018-02-23T06:15:48.648108: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:15:48.648199: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:15:48.650198: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:15:48.650339: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:15:48.650435: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:15:48.650520: failed to setup the link#033[0m#015
+2018-02-23T06:16:00.650824: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:16:00.650964: try to reconnect#033[0m#015
+2018-02-23T06:16:00.651068: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:16:00.651154: wsf: reset connection#033[0m#015
+2018-02-23T06:16:00.651257: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:16:00.651350: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:16:00.653261: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:16:00.653361: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:16:00.653456: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:16:00.653540: failed to setup the link#033[0m#015
+2018-02-23T06:16:03.686657: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:16:03.686803: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:16:12.653923: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:16:12.654060: try to reconnect#033[0m#015
+2018-02-23T06:16:12.654162: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:16:12.654247: wsf: reset connection#033[0m#015
+2018-02-23T06:16:12.654346: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:16:12.654434: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:16:12.656498: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:16:12.656633: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:16:12.656730: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:16:12.656817: failed to setup the link#033[0m#015
+2018-02-23T06:16:24.657107: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:16:24.657245: try to reconnect#033[0m#015
+2018-02-23T06:16:24.657349: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:16:24.657435: wsf: reset connection#033[0m#015
+2018-02-23T06:16:24.657537: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:16:24.657628: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:16:24.659550: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:16:24.659648: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:16:24.659744: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:16:24.659828: failed to setup the link#033[0m#015
+2018-02-23T06:16:36.660106: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:16:36.660248: try to reconnect#033[0m#015
+2018-02-23T06:16:36.660352: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:16:36.660438: wsf: reset connection#033[0m#015
+2018-02-23T06:16:36.660540: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:16:36.660634: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:16:36.662586: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:16:36.662729: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:16:36.662826: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:16:36.662911: failed to setup the link#033[0m#015
+2018-02-23T06:16:48.663181: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:16:48.663363: try to reconnect#033[0m#015
+2018-02-23T06:16:48.663468: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:16:48.663556: wsf: reset connection#033[0m#015
+2018-02-23T06:16:48.663722: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:16:48.663836: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:16:48.665880: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:16:48.666018: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:16:48.666114: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:16:48.666200: failed to setup the link#033[0m#015
+2018-02-23T06:17:00.666438: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:17:00.666575: try to reconnect#033[0m#015
+2018-02-23T06:17:00.666680: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:17:00.666818: wsf: reset connection#033[0m#015
+2018-02-23T06:17:00.666922: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:17:00.667013: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:17:00.669097: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:17:00.669224: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:17:00.669320: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:17:00.669405: failed to setup the link#033[0m#015
+2018-02-23T06:17:03.687102: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:17:03.687243: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:17:07.474467: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BatteryInfo
+2018-02-23T06:17:07.475183: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BatteryStatus":{"value":"054"}}
+2018-02-23T06:17:07.475664: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:17:07.476237: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:17:07.476750: [M][alink/alink_data_transport.c:219] report data={"BatteryStatus":{"value":"054"}}
+2018-02-23T06:17:07.476877: [E][alink/alink_data_transport.c:224] alink_report timeout n:-264
+2018-02-23T06:17:07.477622: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:17:12.669688: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:17:12.669827: try to reconnect#033[0m#015
+2018-02-23T06:17:12.669929: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:17:12.670016: wsf: reset connection#033[0m#015
+2018-02-23T06:17:12.670116: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:17:12.670252: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:17:12.672273: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:17:12.672405: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:17:12.672505: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:17:12.672586: failed to setup the link#033[0m#015
+2018-02-23T06:17:24.672869: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:17:24.673015: try to reconnect#033[0m#015
+2018-02-23T06:17:24.673120: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:17:24.673206: wsf: reset connection#033[0m#015
+2018-02-23T06:17:24.673307: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:17:24.673395: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:17:24.675485: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:17:24.675626: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:17:24.675774: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:17:24.675866: failed to setup the link#033[0m#015
+2018-02-23T06:17:36.676162: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:17:36.676311: try to reconnect#033[0m#015
+2018-02-23T06:17:36.676413: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:17:36.676501: wsf: reset connection#033[0m#015
+2018-02-23T06:17:36.676603: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:17:36.676692: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:17:36.678744: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:17:36.678883: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:17:36.678978: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:17:36.679062: failed to setup the link#033[0m#015
+2018-02-23T06:17:48.679372: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:17:48.679509: try to reconnect#033[0m#015
+2018-02-23T06:17:48.679617: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:17:48.679706: wsf: reset connection#033[0m#015
+2018-02-23T06:17:48.679811: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:17:48.679904: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:17:48.681867: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:17:48.682002: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:17:48.682097: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:17:48.682182: failed to setup the link#033[0m#015
+2018-02-23T06:18:00.682463: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:18:00.682602: try to reconnect#033[0m#015
+2018-02-23T06:18:00.682704: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:18:00.682790: wsf: reset connection#033[0m#015
+2018-02-23T06:18:00.682894: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:18:00.682984: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:18:00.685143: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:18:00.685266: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:18:00.685361: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:18:00.685445: failed to setup the link#033[0m#015
+2018-02-23T06:18:03.687562: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:18:03.687741: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:18:12.685720: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:18:12.685856: try to reconnect#033[0m#015
+2018-02-23T06:18:12.685957: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:18:12.686045: wsf: reset connection#033[0m#015
+2018-02-23T06:18:12.686147: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:18:12.686237: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:18:12.688288: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:18:12.688428: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:18:12.688525: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:18:12.688610: failed to setup the link#033[0m#015
+2018-02-23T06:18:24.688882: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:18:24.689019: try to reconnect#033[0m#015
+2018-02-23T06:18:24.689122: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:18:24.689209: wsf: reset connection#033[0m#015
+2018-02-23T06:18:24.689312: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:18:24.689405: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:18:24.691409: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:18:24.691639: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:18:24.691736: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:18:24.691820: failed to setup the link#033[0m#015
+2018-02-23T06:18:36.692115: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:18:36.692251: try to reconnect#033[0m#015
+2018-02-23T06:18:36.692353: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:18:36.692439: wsf: reset connection#033[0m#015
+2018-02-23T06:18:36.692538: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:18:36.692627: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:18:36.694911: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:18:36.695046: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:18:36.695141: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:18:36.695225: failed to setup the link#033[0m#015
+2018-02-23T06:18:48.695536: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:18:48.695691: try to reconnect#033[0m#015
+2018-02-23T06:18:48.695793: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:18:48.695878: wsf: reset connection#033[0m#015
+2018-02-23T06:18:48.695985: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:18:48.696078: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:18:48.698138: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:18:48.698277: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:18:48.698374: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:18:48.698459: failed to setup the link#033[0m#015
+2018-02-23T06:19:00.698779: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:19:00.698926: try to reconnect#033[0m#015
+2018-02-23T06:19:00.699031: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:19:00.699119: wsf: reset connection#033[0m#015
+2018-02-23T06:19:00.699222: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:19:00.699316: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:19:00.701355: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:19:00.701488: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:19:00.701582: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:19:00.701666: failed to setup the link#033[0m#015
+2018-02-23T06:19:03.688089: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:19:03.688231: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:19:12.701964: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:19:12.702099: try to reconnect#033[0m#015
+2018-02-23T06:19:12.702202: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:19:12.702287: wsf: reset connection#033[0m#015
+2018-02-23T06:19:12.702388: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:19:12.702479: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:19:12.704589: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:19:12.704740: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:19:12.704836: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:19:12.704922: failed to setup the link#033[0m#015
+2018-02-23T06:19:24.705216: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:19:24.705368: try to reconnect#033[0m#015
+2018-02-23T06:19:24.705470: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:19:24.705555: wsf: reset connection#033[0m#015
+2018-02-23T06:19:24.705656: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:19:24.705745: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:19:24.707734: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:19:24.707858: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:19:24.707953: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:19:24.708035: failed to setup the link#033[0m#015
+2018-02-23T06:19:36.708322: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:19:36.708455: try to reconnect#033[0m#015
+2018-02-23T06:19:36.708557: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:19:36.708641: wsf: reset connection#033[0m#015
+2018-02-23T06:19:36.708745: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:19:36.708836: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:19:36.710801: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:19:36.710933: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:19:36.711025: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:19:36.711107: failed to setup the link#033[0m#015
+2018-02-23T06:19:48.711424: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:19:48.711560: try to reconnect#033[0m#015
+2018-02-23T06:19:48.711663: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:19:48.711750: wsf: reset connection#033[0m#015
+2018-02-23T06:19:48.711853: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:19:48.711945: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:19:48.714142: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:19:48.714280: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:19:48.714375: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:19:48.714460: failed to setup the link#033[0m#015
+2018-02-23T06:20:00.714785: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:20:00.714939: try to reconnect#033[0m#015
+2018-02-23T06:20:00.715042: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:20:00.715126: wsf: reset connection#033[0m#015
+2018-02-23T06:20:00.715228: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:20:00.715316: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:20:00.717362: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:20:00.717506: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:20:00.717601: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:20:00.717686: failed to setup the link#033[0m#015
+2018-02-23T06:20:03.688527: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:20:03.688717: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:20:12.717981: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:20:12.718139: try to reconnect#033[0m#015
+2018-02-23T06:20:12.718243: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:20:12.718327: wsf: reset connection#033[0m#015
+2018-02-23T06:20:12.718427: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:20:12.718519: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:20:12.720630: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:20:12.720766: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:20:12.720862: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:20:12.720946: failed to setup the link#033[0m#015
+2018-02-23T06:20:24.721233: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:20:24.721367: try to reconnect#033[0m#015
+2018-02-23T06:20:24.721469: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:20:24.721555: wsf: reset connection#033[0m#015
+2018-02-23T06:20:24.721656: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:20:24.721744: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:20:24.723964: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:20:24.724104: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:20:24.724200: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:20:24.724286: failed to setup the link#033[0m#015
+2018-02-23T06:20:36.724573: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:20:36.724709: try to reconnect#033[0m#015
+2018-02-23T06:20:36.724812: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:20:36.724902: wsf: reset connection#033[0m#015
+2018-02-23T06:20:36.725001: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:20:36.725090: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:20:36.727114: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:20:36.727256: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:20:36.727352: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:20:36.727438: failed to setup the link#033[0m#015
+2018-02-23T06:20:48.727728: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:20:48.727867: try to reconnect#033[0m#015
+2018-02-23T06:20:48.727974: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:20:48.728060: wsf: reset connection#033[0m#015
+2018-02-23T06:20:48.728161: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:20:48.728251: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:20:48.730280: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:20:48.730418: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:20:48.730514: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:20:48.730597: failed to setup the link#033[0m#015
+2018-02-23T06:21:00.730891: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:21:00.731041: try to reconnect#033[0m#015
+2018-02-23T06:21:00.731144: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:21:00.731230: wsf: reset connection#033[0m#015
+2018-02-23T06:21:00.731335: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:21:00.731426: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:21:00.733386: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:21:00.733518: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:21:00.733616: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:21:00.733819: failed to setup the link#033[0m#015
+2018-02-23T06:21:02.474444: [D][proto_converter/mds_plugin_proto_converter_elem.c:310] handle command:BatteryInfo
+2018-02-23T06:21:02.474923: [M][alink/alink_data_transport.c:150] Process JSON_ALINK json={"BatteryStatus":{"value":"053"}}
+2018-02-23T06:21:02.475056: [M][alink/alink_data_transport.c:157] alink_data_send ret = 0
+2018-02-23T06:21:02.475140: [M][alink/alink_data_transport.c:160] enqueue_json_data send tx remind fd
+2018-02-23T06:21:02.475466: [M][alink/alink_data_transport.c:166] alink_data_send ret = 8  fd=11
+2018-02-23T06:21:02.475623: [M][alink/alink_data_transport.c:219] report data={"BatteryStatus":{"value":"053"}}
+2018-02-23T06:21:02.475762: [E][alink/alink_data_transport.c:224] alink_report timeout n:-264
+2018-02-23T06:21:03.689020: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:21:03.689161: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:21:12.734134: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:21:12.734278: try to reconnect#033[0m#015
+2018-02-23T06:21:12.734380: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:21:12.734465: wsf: reset connection#033[0m#015
+2018-02-23T06:21:12.734569: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:21:12.734661: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:21:12.736730: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:21:12.736901: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:21:12.736999: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:21:12.737080: failed to setup the link#033[0m#015
+2018-02-23T06:21:24.737382: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:21:24.737512: try to reconnect#033[0m#015
+2018-02-23T06:21:24.737616: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:21:24.737700: wsf: reset connection#033[0m#015
+2018-02-23T06:21:24.737801: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:21:24.737891: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:21:24.739915: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:21:24.740055: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:21:24.740155: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:21:24.740238: failed to setup the link#033[0m#015
+2018-02-23T06:21:36.740530: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:21:36.740661: try to reconnect#033[0m#015
+2018-02-23T06:21:36.740765: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:21:36.740852: wsf: reset connection#033[0m#015
+2018-02-23T06:21:36.740953: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:21:36.741041: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:21:36.743001: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:21:36.743127: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:21:36.743220: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:21:36.743304: failed to setup the link#033[0m#015
+2018-02-23T06:21:48.743598: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:21:48.743800: try to reconnect#033[0m#015
+2018-02-23T06:21:48.743907: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:21:48.743993: wsf: reset connection#033[0m#015
+2018-02-23T06:21:48.744092: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:21:48.744182: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:21:48.746210: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:21:48.746351: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:21:48.746447: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:21:48.746533: failed to setup the link#033[0m#015
+2018-02-23T06:22:00.746842: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:22:00.746976: try to reconnect#033[0m#015
+2018-02-23T06:22:00.747082: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:22:00.747202: wsf: reset connection#033[0m#015
+2018-02-23T06:22:00.747313: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:22:00.747407: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:22:00.749485: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:22:00.749646: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:22:00.749744: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:22:00.749829: failed to setup the link#033[0m#015
+2018-02-23T06:22:03.689461: #033[32m<INFO> [system_monitor#59] : 
+2018-02-23T06:22:03.689599: sdk memory usage: peak 13365, current 9814#033[0m#015
+2018-02-23T06:22:07.166563: [D][plug_cmd.c:228] recv:{"request":"netmon","todo":"notify","type":"WIFI","state":"online","ssid":"ECOM4F-RD5-jack-24G","rssi":81,"IPv4.Configuration":{"Address":"192.168.10.114","Gateway":"192.168.10.1"}}
+2018-02-23T06:22:12.750121: #033[32m<INFO> [wsf_keep_connection#533] : 
+2018-02-23T06:22:12.750292: try to reconnect#033[0m#015
+2018-02-23T06:22:12.750396: #033[32m<INFO> [wsf_reset_connection#92] : 
+2018-02-23T06:22:12.750483: wsf: reset connection#033[0m#015
+2018-02-23T06:22:12.750587: #033[37m<DEBUG> [wsf_set_state#149] : 
+2018-02-23T06:22:12.750736: CONNECT_STATE_CLOSE -> CONNECT_STATE_CLOSE#033[0m#015
+2018-02-23T06:22:32.765785: #033[33m<ERROR> [wsf_open_connection0#37] : 
+2018-02-23T06:22:32.765924: can't estatblish tcp connection.#033[0m#015
+2018-02-23T06:22:32.766023: #033[33m<ERROR> [wsf_keep_connection#536] : 
+2018-02-23T06:22:32.766108: failed to setup the link#033[0m#015
