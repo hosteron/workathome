@@ -60,7 +60,7 @@ fi
 		fi
 	done
 	echo -n "]"
-	echo -n "$PER"
+	echo -n "$PER%"
 	echo -ne "\r"
 done
 echo ""
