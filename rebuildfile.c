@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 			return -1;
 		}
 		char backfile[64];
-		int tmp = fread(backfile, sizeof(backfile),1,pRemove);
+		int tmp = fread(backfile, 1,sizeof(backfile),pRemove);
 		if(tmp<= 0)
 		{
 			fclose(pRemove);
@@ -29,6 +29,7 @@ int main(int argc, char **argv)
 		printf("rm -f %s\n",backfile);
 		unlink(backfile);
 		fclose(pRemove);
+		unlink(BACKFILENAME);
 		return 0;
 	}
 	char filename[32] = {0};
@@ -59,12 +60,13 @@ int main(int argc, char **argv)
 	int num = 0;
 	#define READBUF_SIZE 2048
 	char buf[READBUF_SIZE] = {0};
-	int total = 0;
+	long long total = 0;
 	char tmpbuf[READBUF_SIZE] = {0};
 	char *p = NULL;
 	char *q = NULL;
-	while((num = fread(buf,1, READBUF_SIZE, pFilein)))
+	while(fgets(buf, READBUF_SIZE,pFilein))
 	{
+		num = strlen(buf);
 		total += num;
 		p = &buf[0];
 		int flag = 0;
@@ -76,8 +78,7 @@ int main(int argc, char **argv)
 				{
 					*q = '\0';
 					fwrite(buf,q - buf,1, pFileOut);
-					fwrite(p,&buf[num] - p,1,pFileOut);
-					flag = 0;
+					fwrite(p,&buf[num] - p - 1,1,pFileOut);
 					break;
 				}
 				else
@@ -87,13 +88,12 @@ int main(int argc, char **argv)
 					{
 						*q = '\n';
 						*(q+1) = '\0';
-						fwrite(&buf[28], q - &buf[28], 1, pFileOut);
-						flag = 0;
+						fwrite(&buf[32], q - &buf[32]+1, 1, pFileOut);
 						break;
 					}
 				}
 			}
-			else if(*p == '#'&&*(p+1) == '0' && *(p+2) == '3' && *(p+3) == '3' && *(p+4) == '[')
+			else if((*p == '#')&&(*(p+1) == '0') && (*(p+2) == '3') && (*(p+3) == '3') && (*(p+4) == '['))
 			{
 				q = p;
 				p+= 5;
@@ -102,10 +102,47 @@ int main(int argc, char **argv)
 			}
 			p++;
 		}
-		
+		if(!flag)
+		{
+			fwrite(buf, num,1, pFileOut);
+		}
 		memset(buf, 0, num);
 		num = 0;
-		
+		int per = total*100 / totalsize;
+		int i = 0;
+		printf("[");
+		for(i = 1; i <= 100;i++)
+		{
+			if(i<per)
+			{
+				printf("=");
+			}
+			else if(i == per)
+			{
+				printf(">");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("]%d\r", per);
 	}
-	printf("total = %d\n", total);
+	fsync(fileno(pFileOut));
+	fflush(pFileOut);
+	FILE *pBack = fopen(BACKFILENAME,"wb");
+	if(!pBack)
+	{
+		printf("can not open %s\n", BACKFILENAME);
+		fclose(pFilein);
+		fclose(pFileOut);
+		return -1;
+	}
+	fwrite(outfilename,strlen(outfilename),1,pBack);
+	fsync(fileno(pBack));
+	fflush(pBack);
+	fclose(pBack);
+	fclose(pFilein);
+	fclose(pFileOut);
+	printf("\ntotal = %lld\n", total);
 }
