@@ -1,0 +1,19 @@
+{
+"header":{
+	"auth_id": "7beb2c4486074fb1bbee21a15a7b00d7",
+	"data_category": "log",
+	"data_charset": "UTF-8",
+	"data_encrypt": 0,
+	"compressed": 0,
+	"sn": "E0000917817600450187",
+	"model": "DJ35",
+	"msg_time":1517282293751
+},
+"body":{
+	"file_name": "SQLLog.txt2017-12",
+	"file_length":10,
+	"start_index":0,
+	"file_content":"1234567890",
+	"finished": 1
+}
+}
